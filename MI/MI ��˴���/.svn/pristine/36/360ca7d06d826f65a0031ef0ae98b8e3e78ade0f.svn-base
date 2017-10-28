@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#shell {
+  background-color: #F5F5F5; }
+
+#DCH_headshell {
+  background: #fff;
+  width: 100%; }
+
+.DCH_head_top {
+  width: 90%;
+  margin: 0 auto;
+  color: #999;
+  font-size: 12px; }
+  .DCH_head_top a {
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 40px;
+    margin: 0 4px; }
+    .DCH_head_top a:hover {
+      color: #424242; }
+
+#DCH_head {
+  width: 90%;
+  margin: 0 auto; }
+  #DCH_head .DCH_top, #DCH_head .DCH_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px 8px 0px;
+    border-bottom: 1px solid #E0E0E0; }
+    #DCH_head .DCH_top .DCH_top_center, #DCH_head .DCH_bottom .DCH_top_center {
+      width: 89%; }
+    #DCH_head .DCH_top p, #DCH_head .DCH_bottom p {
+      font-size: 14px;
+      color: #424242; }
+      #DCH_head .DCH_top p:first-of-type, #DCH_head .DCH_bottom p:first-of-type {
+        margin-right: -50px;
+        color: #B0B0B0; }
+      #DCH_head .DCH_top p a, #DCH_head .DCH_bottom p a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #424242; }
+        #DCH_head .DCH_top p a:hover, #DCH_head .DCH_bottom p a:hover {
+          color: #FC7D00; }
+      #DCH_head .DCH_top p span, #DCH_head .DCH_bottom p span {
+        display: inline-block;
+        padding: 0 20px;
+        margin-bottom: 15px;
+        width: 100px; }
+        #DCH_head .DCH_top p span:first-of-type, #DCH_head .DCH_bottom p span:first-of-type {
+          margin-right: 30px; }
+        #DCH_head .DCH_top p span a, #DCH_head .DCH_bottom p span a {
+          text-decoration: none;
+          font-size: 14px;
+          color: #424242; }
+          #DCH_head .DCH_top p span a:hover, #DCH_head .DCH_bottom p span a:hover {
+            color: #FC7D00; }
+  #DCH_head .DCH_bottom {
+    border-bottom: 0; }
+    #DCH_head .DCH_bottom .DCH_top_center {
+      float: left;
+      width: 97%; }
+
+#DCH_goodsshell {
+  margin-top: 30px;
+  width: 100%; }
+  #DCH_goodsshell .DCH_goodshead {
+    width: 1200px;
+    margin: 0 auto; }
+    #DCH_goodsshell .DCH_goodshead p {
+      float: left;
+      margin-left: -25px; }
+      #DCH_goodsshell .DCH_goodshead p span {
+        color: #E0E0E0; }
+        #DCH_goodsshell .DCH_goodshead p span a {
+          font-size: 14px;
+          color: #424242;
+          text-decoration: none;
+          display: inline-block;
+          padding: 0 25px; }
+    #DCH_goodsshell .DCH_goodshead form {
+      float: right; }
+      #DCH_goodsshell .DCH_goodshead form input {
+        float: left;
+        height: 26px; }
+      #DCH_goodsshell .DCH_goodshead form span {
+        float: left;
+        margin-right: 20px;
+        margin-left: 5px; }
+        #DCH_goodsshell .DCH_goodshead form span a {
+          font-size: 14px;
+          color: #424242;
+          text-decoration: none; }
+
+#goods {
+  padding-top: 40px;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  #goods .imageshell {
+    border: 1px solid #ccc;
+    height: 430px;
+    width: 265px;
+    position: relative;
+    background: #fff;
+    margin: 15px;
+    float: left; }
+    #goods .imageshell span:first-of-type {
+      font-size: 13px;
+      display: block;
+      line-height: 20px;
+      text-align: center;
+      color: #999;
+      margin-top: 265px; }
+    #goods .imageshell .sales {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      text-align: center;
+      background: #E53935;
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px; }
+    #goods .imageshell .Pinkage {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      text-align: center;
+      background: #FFAC13;
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px; }
+    #goods .imageshell .Pinkage1, #goods .imageshell .Pinkage2 {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      text-align: center;
+      background: #83C44E;
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px; }
+    #goods .imageshell .Pinkage2 {
+      background: #FFAC13; }
+    #goods .imageshell span:nth-of-type(2) {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;
+      color: #ff6700; }
+    #goods .imageshell .big {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 30px;
+      top: 35px; }
+      #goods .imageshell .big img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0; }
+    #goods .imageshell .small {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      left: 20px; }
+      #goods .imageshell .small img {
+        width: 34px;
+        height: 34px;
+        margin: 4px;
+        border: 1px solid #E0E0E0; }
+    #goods .imageshell .like {
+      position: absolute;
+      top: 20px;
+      left: 14px;
+      height: 30px;
+      width: 100%; }
+      #goods .imageshell .like span:first-of-type {
+        font-size: 35px;
+        margin-right: 5px; }
+      #goods .imageshell .like p {
+        float: left; }
+        #goods .imageshell .like p span {
+          width: 30px;
+          height: 50px;
+          float: left;
+          height: 30px;
+          margin-top: 0px;
+          display: none;
+          font-size: 14px; }
+          #goods .imageshell .like p span img {
+            height: 30px;
+            width: 30px; }
+      #goods .imageshell .like p:nth-of-type(2) {
+        float: right;
+        margin-right: 30px;
+        margin-top: -7px; }
+        #goods .imageshell .like p:nth-of-type(2) span {
+          width: 45px;
+          float: left;
+          height: 30px;
+          margin-top: 0px;
+          display: none;
+          font-size: 14px;
+          line-height: 32px; }
+          #goods .imageshell .like p:nth-of-type(2) span:nth-of-type(2) {
+            width: 30px; }
+          #goods .imageshell .like p:nth-of-type(2) span:nth-of-type(1) {
+            margin-right: 0px; }
+          #goods .imageshell .like p:nth-of-type(2) span img {
+            height: 30px;
+            width: 30px; }
+
+#skip {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center; }
+  #skip a {
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 30px;
+    color: #B0B0B0; }
+    #skip a:hover {
+      background: #B0B0B0;
+      color: #fff; }

@@ -1,0 +1,115 @@
+package com.qf.web.servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.poi.ss.formula.functions.T;
+
+import com.google.gson.Gson;
+import com.qf.bean.Base;
+import com.qf.bean.User;
+import com.qf.service.UserService;
+public class UserServlet extends BaseServlet {
+
+	private final static Logger LOG = LogManager.getLogger(UserServlet.class);
+
+	
+	public String login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		 User user	= new User();
+	   	  try {
+			BeanUtils.populate(user, request.getParameterMap());
+		} catch (IllegalAccessException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (InvocationTargetException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+			UserService service = new UserService();
+			try {
+				User user1 = service.find(user);
+				Base<User> base = new Base<User>();
+				
+				if(user1 == null){
+					
+					base.setCode(0);
+					base.setMsg("用户名或密码错误");
+					Gson gson=new Gson();
+					 String json = gson.toJson(base);
+					 
+					 return json;
+				}else{
+					
+					base.setCode(1);
+					base.setContent(user1);
+					
+					Gson gson=new Gson();
+					 String json = gson.toJson(base);
+					 System.out.println(json);
+					 return json;
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		return null;
+
+		
+	}
+	public String register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Throwable {
+
+
+		response.setContentType("text/html");
+		
+		User user	= new User();
+		
+	   	String password=request.getParameter("password");
+	   	
+	   	Cookie[] cookies=request.getCookies();
+	   	Cookie cookie= cookies[0];
+	   	String username=cookie.getValue();
+		UserService service = new UserService();
+			user.setUsername(username);
+				user.setPassword(password);
+				service.save(user);
+			
+		return null;
+
+		
+	}
+	public String register2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Throwable {
+
+
+		response.setContentType("text/html");
+		
+		User user	= new User();
+		
+	   	String password=request.getParameter("password");
+	   	
+	   	Cookie[] cookies=request.getCookies();
+	   	Cookie cookie= cookies[0];
+	   	String username=cookie.getValue();
+		UserService service = new UserService();
+			user.setUsername(username);
+				user.setPassword(password);
+				service.save(user);
+			
+		return null;
+
+		
+	}
+	
+	
+}

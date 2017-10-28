@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="font/font_dengluzhuce/iconfont.css">
+	<script type="text/javascript" src = "./js/jquery.js"></script>
+	<script type="text/javascript" src = "./js/login.js"></script>
+	
+</head>
+<body>
+	<div id="wtf_body">
+		<div id="wtf_banner_logo"><i class="iconfont icon-xiaomi"></i></div>
+		<div id="wtf_banner_title"><h1>注册小米账号</h4></div>
+		<div id="wtf_body_wai">
+			<form action="servlet/UserServlet?method=register" class="login" name="login" method="post">
+
+				<!-- 手机号输入部分 -->
+				<div id="wtf_body_one" >
+					<h4 id="wtf_body_sort_1">国家/地区</h4>
+					<div id="wtf_body_sort_2">
+						<p id="wtf_body_sort_2_1">中国</p>
+						<i class="iconfont icon-xialajiantou" id="wtf_body_font1"></i>
+					</div>
+					<div id="wtf_body_sort_3">成功注册账号后，国家地区将不能修改</div>
+					<h4 id="wtf_body_sort_4">手机号码</h4>
+					<div id="wtf_body_sort_5">
+						<div>+86&nbsp;<i class="iconfont icon-xialajiantouxiangxia"></i><input type="text" class="phonenum" placeholder="输入手机号" id = "phonenum" name="username"></div>
+						<div></div>
+					</div>
+					<span id="wtf_body_hint"><i class="iconfont icon-tubiao-"></i><i class="phonenum"></i></span>
+						<!-- 验证手机号码部分 -->
+
+					<input type="button" id="wtf_body_sort_6" value="立即注册">
+					<p id="wtf_body_sort_7">注册账号即表示您同意兵愿意遵守小米<a href="">用户协议</a>和<a href="">隐私政策</a></p>
+				</div>
+				<!-- 验证码接收部分 -->
+				<div id="wtf_body_two">
+					<div id="wtf_body_sort_8">
+						<p>我们已经发送一条验证短信下发至您的手机</p>
+						<p>请输入短信中的验证码</p>
+					</div>
+					<div id="wtf_body_sort_9">
+						<input type="text" placeholder="请输入验证码" id="wtf_body_sort_10">
+						<a href="">重新发送</a>
+					</div>
+					<span id="wtf_body_sort_11"><i class="iconfont icon-tubiao-">&nbsp;</i>请正确的输入短信验证码</span>
+					<div id="wtf_body_sort_12">下一步</div>
+					<div id="wtf_body_sort_13">返回</div>
+				</div>
+				<!-- 输入密码部分 -->
+				<div id="wtf_body_three">
+
+
+					<!-- 将注册手机号码写入wtf_span_1 -->
+					<span class="wtf_span_1"></span>&ensp;<div id="wtf_code_1">61564525896486258</div></p>
+					<h6 class="wtf_span_2">请设置您的密码：</h6>
+					<input id="wtf_code_2" type="text" placeholder="&ensp;请输入密码" name="password" class="first">
+					<span id="wtf_code_4"><i class="iconfont icon-tubiao-">&nbsp;</i><i class = first>请输入密码<i></span>
+					<input id="wtf_code_3" type="text" placeholder="&ensp;请再次输入密码" name="password" class="sec">
+					<span id="wtf_code_5"><i class="iconfont icon-tubiao-">&nbsp;</i><i class = "sec">两次密码不一致</i></span>
+					<div>
+						
+						
+					</div>
+					<input type="submit" value="提交" id="wtf_body_sort_14">
+				</div>
+				
+			</form>
+			
+		</div>
+	</div>
+</body>
+</html>

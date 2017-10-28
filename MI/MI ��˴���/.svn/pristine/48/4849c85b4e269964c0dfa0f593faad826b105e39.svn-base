@@ -1,0 +1,43 @@
+package com.qf.web.servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import com.google.gson.Gson;
+import com.qf.bean.Base;
+import com.qf.bean.Category;
+import com.qf.service.CategoryService;
+public class CategoryServlet extends BaseServlet {
+
+	private final static Logger LOG = LogManager.getLogger(CategoryServlet.class);
+
+	
+	public String findType(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		CategoryService service = new CategoryService();
+		try {
+			List<Category> list = service.findAll();
+			 Base<List<Category>> base = new Base<List<Category>>();
+			 base.setCode(1);
+			 base.setContent(list);
+			 Gson gson=new Gson();
+			 String json = gson.toJson(base);
+			 
+			 return json;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

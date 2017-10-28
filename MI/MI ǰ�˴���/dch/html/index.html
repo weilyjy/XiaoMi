@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品列表页</title>
+	<script type="text/javascript" src = "../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src = "../js/index.js"></script>
+	<script type="text/javascript" src = "../js/shoppingCar.js"></script>
+	<script type="text/javascript" src = "../js/jquery.cookie.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/shoppingCarFonts/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/shoppingCar.css"/>
+
+	<link rel="stylesheet" type="text/css" href="../css/css/iconfont.css">
+	<link rel="stylesheet" href="../css/css/index.css">
+	<script type="text/javascript" src = "../js/js/require.js" defer async = "true" data-main = "../js/js/main"></script>
+	<script src='../js/js/video.js'></script>
+</head>
+<body>
+	<div id="wr_nav1">
+		<ul class="wr_nav1_ul1">
+		</ul>
+		<ul class="wr_nav1_ul2">
+			<li><a href="#">登录</a></li>
+			<li><a href="#">注册</a></li>
+			<li><a href="#">消息通知</a></li>
+			<li>
+				<a href="../../lhn/shoppingCar.html">
+					<i class="iconfont icon-gouwuche"></i>
+					<span>购物车</span><span>(0)</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="wr_nav2" style="background:#fff">
+		<a class="logo" href="#"><!-- <img src="images/logo.png" alt=""> --></a>
+		<ul class="wr_nav2_ul">
+			<li id="1"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="2"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="3"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="5"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="6"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id=""><a href="#"> </a></li>
+			<li id="4"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="8"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id=""><a href="#" ></a></li>
+			<li id=""><a href="#" ></a></li>
+		</ul>
+		<div class="wr_seach">
+			<form action="">
+				<input type="text" id="seachWorld">
+				<input type="submit" value="">
+				<i class="iconfont icon-sousuo01"></i>
+			</form>
+			<div class="defalutKey">
+				<a href="#">小米Max2</a>
+				<a href="#">小米Noet 3 现货</a>
+			</div>
+			<div class="keyWorld">
+				<ul id="kW_select">
+ 				    <li><a href="#">小米6</a><span>约有7件</span></li>
+					<li><a href="#">红米Note 4X</a><span>约有8件</span></li>
+					<li><a href="#">小米MIX</a><span>约有9件</span></li>
+					<li><a href="#">小米Max2</a><span>约有7件</span></li>
+					<li><a href="#">小米5X</a><span>约有5件</span></li>
+					<li><a href="#">手环</a><span>约有4件</span></li>
+					<li><a href="#">耳机</a><span>约有3件</span></li>
+					<li><a href="#">充电宝</a><span>约有9件</span></li>
+					<li><a href="#">运动鞋</a><span>约有17件</span></li>
+					<li><a href="#">路由器</a><span>约有37件</span></li>
+					<li><a href="#">小米盒子</a><span>约有7件</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id = "shell">
+		<p class="DCH_head_top">
+			<span><a href="">首页</a>></span>
+			<span><a href="">所有商品</a>></span>
+			<span>耳机/音响</span>
+		</p>
+		<div id = "DCH_headshell">
+
+			<div id = "DCH_head">
+				<div class = "DCH_top">
+					<p class = "DCH_top_left">分类:</p>
+					<div class = "DCH_top_center">
+						<p><span><a href="#">全部</a></span>
+							<span><a href="#">小米头戴式耳机</a></span>
+							<span><a href="#">小米圈铁耳机</a></span>
+							<span><a href="#">小米活塞耳机</a></span>
+							<span><a href="#">小米蓝牙耳机</a></span>
+							<span><a href="#">品牌耳机</a></span></p>
+						<p><span><a href="#">音响</a></span>
+							<span><a href="#">小米胶囊耳机</a></span>
+							<span><a href="#">降噪耳机</a></span>
+						</p>
+					</div>
+					<p class = "DCH_top_right"><a href="#">更多▼</a></p>
+				</div>
+				<div class="DCH_bottom">
+					<p class = "DCH_top_left">品牌:</p>
+					<div class = "DCH_top_center">
+						<p><span><a href="#">全部</a></span>
+							<span><a href="#">小米</a></span>
+							<span><a href="#">第三方</a></span>
+							<span><a href="#">1MORE</a></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "DCH_goodsshell">
+			<div class = "DCH_goodshead">
+				<P>
+					<span><a href="#" id="renew">推荐</a>|</span>
+					<span><a href="#" id = "newgoods">新品</a>|</span>
+					<span><a href="#">价格</a>|</span>
+					<span><a href="#">评论</a></span>
+				</P>
+				<P>
+					<form action="" >
+						<input type="checkbox" name="">
+						<span><a href="#">查看评价</a></span>
+						<input type="checkbox" name="" id = "preference">
+						<span><a href="#">仅显示特惠商品</a></span>
+						<input type="checkbox" name="">
+						<span><a href="#">仅显示有货商品</a></span>
+					</form>
+
+				</P>
+			</div>
+			<!-- 商品加载 -->
+			<div id = "goods">
+
+			</div>
+			<!-- 页面切换 -->
+			<div id = "skip">
+				<p>
+					<a href="" class = "1"><</a>
+					<a href="" class = "serial" >1</a>
+					<a href="" class = "serial">2</a>
+					<a href="" class = "2">></a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<p style="position:relative;
+      left: 478px;
+      top:31px;
+      width: 300px;
+      background: #F5F5F5;
+      text-align: center;
+      font-size: 30px;
+      letter-spacing:5px;
+      color:#757575;">您还看了</p>
+	<div  id = "DCH_footer">
+
+		<div id = "DCH_imgshell">
+		</div>
+		<div id = "cir">
+			<p class = "show" name = "1"><span></span></p>
+			<p class = "beforeshow" name = "2"><span></span></p>
+		</div>
+
+	</div>
+
+	<!-- 底部信息    第五部分-->
+	<div class = "lhn_copyrightInfo" style="margin-bottom:-40px;">
+		<div class = "thinborder">
+			<div class = "top">
+				<a href="#">
+					<i class = "iconfont icon-banshou"></i>
+					<span>预约维修服务</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-tian"></i>
+					<span>7天无理由退货</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-15tian"></i>
+					<span>15天免费换货</span>
+				</a>
+				<a href="">
+					<i class = "iconfont icon-liwuhe01"></i>
+					<span>满150元包邮</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-dingwei"></i>
+					<span>520余家售后网点</span>
+				</a>
+			</div>
+			<div class = "bottom">
+				<ul class = "left">
+					<li>
+						<span>帮助中心</span>
+						<a href="#">账户管理</a>
+						<a href="#">购物指南</a>
+						<a href="#">订单操作</a>
+					</li>
+					<li>
+						<span>服务支持</span>
+						<a href="#">售后政策</a>
+						<a href="#">自助服务</a>
+						<a href="#">相关下载</a>
+					</li>
+					<li>
+						<span>线下门店</span>
+						<a href="#">小米之家</a>
+						<a href="#">服务网点</a>
+						<a href="#">零售网点</a>
+					</li>
+					<li>
+						<span>关于小米</span>
+						<a href="#">了解小米</a>
+						<a href="#">加入小米</a>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<span>关注我们</span>
+						<a href="#">新浪微博</a>
+						<a href="#">小米部落</a>
+						<a href="#">官方微信</a>
+					</li>
+					<li>
+						<span>特色服务</span>
+						<a href="#">F码通道</a>
+						<a href="#">礼物码</a>
+						<a href="#">防伪查询</a>
+					</li>
+				</ul>
+				<div class = "right">
+					<h3>400-100-5678</h3>
+					<p>周一至周日 8:00-18:00</p>
+					<p>(仅收市话费)</p>
+					<div class = "kefuFor24">
+						<i class = "iconfont icon-liaotian"></i>
+						<span>24小时在线客服</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 最底部信息  第六部分-->
+	<div class = "lhn_lastInfo">
+		<div class = "thinborder">
+			<div class = "top">
+				<div class = "left">
+					<img src = "../images/logo-footer.png"/>
+				</div>
+				<div class = "center">
+					<p class = "firstline">
+						<a href="#">小米商城</a>
+						<a href="#">MIUI</a>
+						<a href="#">米聊</a>
+						<a href="#">多看书城</a>
+						<a href="#">小米路由器</a>
+						<a href="#">视频电话</a>
+						<a href="#">小米天猫店</a>
+						<a href="#">小米天猫直营店</a>
+						<a href="#">小米网盟</a>
+						<a href="#">小米移动</a>
+						<a href="#">隐私政策</a>
+						<a href="#">Select Region</a>
+					</p>
+					<p class = "secondline">
+						<span>&copy;</span>
+						<a href="#">mi.com</a>
+						<span>京ICP证110507号</span>
+						<a href="#">京ICP备10046444号</a>
+						<a href="#">京公安网备1101080202134号</a>
+						<a href="#">京网文[2014]0059-0009号</a>
+					</p>
+					<p class = "thirdline">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有所有数据均出自我司实验室测试</p>
+				</div>
+				<div class = "right">
+					<a href="#"><img src = "../images/truste.png"/></a>
+					<a href="#"><img src = "../images/v-logo-2.png"/></a>
+					<a href="#"><img src = "../images/v-logo-1.png"/></a>
+					<a href="#"><img src = "../images/v-logo-3.png"/></a>
+				</div>
+			</div>
+			<p class = "bottom">
+				<img src = "../images/slogan2016.png"/>
+			</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

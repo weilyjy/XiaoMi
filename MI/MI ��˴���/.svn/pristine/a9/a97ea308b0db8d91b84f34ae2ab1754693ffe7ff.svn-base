@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script type="text/javascript" src = "js/require.js" defer async = "true" data-main = "js/main"></script>
+</head>
+<body>
+	<div id="wr_nav1">
+		<ul class="wr_nav1_ul1">
+		</ul>
+		<ul class="wr_nav1_ul2">
+			<li><a href="#">登录</a></li>
+			<li><a href="#">注册</a></li>
+			<li><a href="#">消息通知</a></li>
+			<li>
+				<a href="#">
+					<i class="iconfont icon-gouwuche"></i>
+					<span>购物车</span><span>(0)</span>
+				</a>
+			</li>			
+		</ul>
+	</div>
+	<div id="wr_nav2">
+		<a class="logo" href="#"><!-- <img src="images/logo.png" alt=""> --></a>
+		<ul class="wr_nav2_ul">
+		</ul>
+		<div class="wr_seach">
+			<form action="">
+				<input type="text" id="seachWorld">
+				<input type="submit" value="">
+				<i class="iconfont icon-sousuo01"></i>
+			</form>
+			<div class="defalutKey">
+				<a href="#">小米Max2</a>
+				<a href="#">小米Noet 3 现货</a>
+			</div>
+			<div class="keyWorld">
+				<ul id="kW_select">
+ 				    <li><a href="#">小米6</a><span>约有7件</span></li>
+					<li><a href="#">红米Note 4X</a><span>约有8件</span></li>
+					<li><a href="#">小米MIX</a><span>约有9件</span></li>
+					<li><a href="#">小米Max2</a><span>约有7件</span></li>
+					<li><a href="#">小米5X</a><span>约有5件</span></li>
+					<li><a href="#">手环</a><span>约有4件</span></li>
+					<li><a href="#">耳机</a><span>约有3件</span></li>
+					<li><a href="#">充电宝</a><span>约有9件</span></li>
+					<li><a href="#">运动鞋</a><span>约有17件</span></li>
+					<li><a href="#">路由器</a><span>约有37件</span></li>
+					<li><a href="#">小米盒子</a><span>约有7件</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="wr_banner">
+			<div class="play" id="play">
+			 	<ol>
+			    	<li class="active"></li>
+			        <li></li>
+			        <li></li>
+			        <li></li>
+			        <li></li>
+			        <li></li>
+			    </ol>
+		<ul class="imgList">
+			<li class="imgOn" style="display: block;"><a href="#"><img src="http://i1.mifile.cn/a4/xmad_1508247448511_leCdQ.jpg" alt=""></a></li>
+			
+			<li><a href="#"><img src="http://i1.mifile.cn/a4/xmad_15081427512316_rBapH.jpg" alt=""></a></li>
+			
+			<li><a href="#"><img src="http://i1.mifile.cn/a4/xmad_15057916296159_nUYKy.jpg" alt=""/></a></li>
+			<li><a href="#"><img src="http://i1.mifile.cn/a4/xmad_15058906332794_gQDJX.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="http://i1.mifile.cn/a4/xmad_15085004805957_eKOLd.jpg" alt="" /></a></li>
+			<li><a href="#"><img src="http://i1.mifile.cn/a4/xmad_15085001560886_Sohmj.jpg" alt="" /></a></li>
+		</ul>
+		<div class="prive"><strong><</strong></div>
+		<div class="next"><strong>></strong></div>
+			
+		</div>
+	</div>
+	<div id="wr_sideNav">
+
+			<ul class="sideNav_good">
+				
+			</ul>
+		
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+	<title>登录</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="Images/wangyi.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="font/font_dengluzhuce/iconfont.css">
+	<script type="text/javascript" src = "./js/jquery.js"></script>
+	<script type="text/javascript" src = "./js/register.js"></script>
+</head>
+<body>
+	<footer>
+		<div><img src="img/mistore_logo.png" alt=""></div>
+	</footer>
+	<div id="wtf_banner">
+		<img src="img/523923ee3d985386d832e082980e4de9.jpg" alt="">
+	</div>
+	<div id="wtf_register_list">
+		<div id="wtf_reg_nav">
+			<a id="wtf_reg_nav_num1" class="wtf_active">账号登录</a>
+			<span>|</span>
+			<a id="wtf_reg_nav_num2">扫码登录</a>
+		</div>
+	</div>
+	<form id="wtf_reg_tab" method="post" action="servlet/UserServlet?method=login" >
+		<div class="wtf_reg_tab_num1"><input type="text" id="username" name="username" placeholder="邮箱/手机号码/小米ID"></div>
+		<span id="wtf_code_5"><i class="iconfont icon-tubiao-" style="color: red;font-size: 12px;line-height: 30px">&nbsp;</i><i class = "fir" style= "color: red;font-size: 12px;line-height: 30px"></i></span>
+		<div class="wtf_reg_tab_num2"><input type="password" id="password" name="password" placeholder = "密码"></div>
+		<span id="wtf_code_4"><i class="iconfont icon-tubiao-" style= "color: red;font-size: 12px;line-height: 30px">&nbsp;</i><i class = "sec" style= "color: red;font-size: 12px;line-height: 30px"></i></span>
+		<input type="submit" id="wtf_form_login" value="登录" onclick="">
+		
+		<div id="wtf_reg_nav_num3">
+			<a >立即注册</a>
+			<span>|</span>
+			<a >忘记密码？</a>
+		</div>
+		<div id="wtf_form_ban"> 
+			<div><h6>其他登录方式</h6></div>
+			<ul>
+				<a href="#" id="wtf_form_msmy"><i class="iconfont icon-qq"></i></a>
+				<a href="#"><i class="iconfont icon-weibo"></i></a>
+				<a href="#"><i class="iconfont icon-zhifubao-copy-copy-copy"></i></a>
+				<a href="#"><i class="iconfont icon-weixin1"></i></a>
+			</ul>
+		</div>
+		<div>
+			
+		</div>
+	
+	</form>
+	
+</body>
+</html>

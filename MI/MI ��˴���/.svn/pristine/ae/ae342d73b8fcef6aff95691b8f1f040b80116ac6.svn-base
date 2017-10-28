@@ -1,0 +1,46 @@
+package com.qf.web.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.qf.bean.User;
+import com.qf.service.UserService;
+
+
+
+
+
+public class Register2 extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public String register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Throwable {
+
+
+		response.setContentType("text/html");
+		
+		User user	= new User();
+		
+	   	String password=request.getParameter("password");
+	   	
+	   	Cookie[] cookies=request.getCookies();
+	   	Cookie cookie= cookies[0];
+	   	String username=cookie.getValue();
+		UserService service = new UserService();
+			user.setUsername(username);
+				user.setPassword(password);
+				service.save(user);
+			
+		return null;
+
+		
+	}
+
+}
