@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src = "../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src = "../js/index.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div id = "shell">
+		<p class="DCH_head_top">
+			<span><a href="">首页</a>></span>
+			<span><a href="">所有商品</a>></span>
+			<span>耳机/音响</span>
+		</p>
+		<div id = "DCH_headshell">
+			
+			<div id = "DCH_head">
+				<div class = "DCH_top">
+					<p class = "DCH_top_left">分类:</p>
+					<div class = "DCH_top_center">
+						<p><span><a href="#">全部</a></span>
+							<span><a href="#">小米头戴式耳机</a></span>
+							<span><a href="#">小米圈铁耳机</a></span>
+							<span><a href="#">小米活塞耳机</a></span>
+							<span><a href="#">小米蓝牙耳机</a></span>
+							<span><a href="#">品牌耳机</a></span></p>
+						<p><span><a href="#">音响</a></span>
+							<span><a href="#">小米胶囊耳机</a></span>
+							<span><a href="#">降噪耳机</a></span>
+						</p>	
+					</div>
+					<p class = "DCH_top_right"><a href="#">更多▼</a></p>
+				</div>
+				<div class="DCH_bottom">
+					<p class = "DCH_top_left">品牌:</p>
+					<div class = "DCH_top_center">
+						<p><span><a href="#">全部</a></span>
+							<span><a href="#">小米</a></span>
+							<span><a href="#">第三方</a></span>
+							<span><a href="#">1MORE</a></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "DCH_goodsshell">
+			<div class = "DCH_goodshead">
+				<P>
+					<span><a href="#" id="renew">推荐</a>|</span>
+					<span><a href="#" id = "newgoods">新品</a>|</span>
+					<span><a href="#">价格</a>|</span>
+					<span><a href="#">评论</a></span>
+				</P>
+				<P>	
+					<form action="" >
+						<input type="checkbox" name="">
+						<span><a href="#">查看评价</a></span>
+						<input type="checkbox" name="" id = "preference">
+						<span><a href="#">仅显示特惠商品</a></span>
+						<input type="checkbox" name="">
+						<span><a href="#">仅显示有货商品</a></span>
+					</form>
+				
+				</P>
+			</div>
+			<!-- 商品加载 -->
+			<div id = "goods">
+				
+			</div>
+			<!-- 页面切换 -->
+			<div id = "skip">
+				<p>
+					<a href="" class = "1"><</a>
+					<a href="" class = "serial" >1</a>
+					<a href="" class = "serial">2</a>
+					<a href="" class = "2">></a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

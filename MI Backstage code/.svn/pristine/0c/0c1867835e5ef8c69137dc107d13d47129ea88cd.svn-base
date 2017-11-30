@@ -1,0 +1,30 @@
+window.onload = function(){
+	$.ajax({
+		method:"get",
+		url:"servlet/FindServlet?method=find&uname=zansan",
+		
+		success:function(data){
+			var html =""
+			var html1 = '<div class = "big">';
+			var html2 = '<div class = "small">';
+			var arr = JSON.parse(data);
+			alert(arr[0].pimage.substring(6,11));
+			html = '<div>'+ arr[0].pname + '</div><img src = "image/' + arr[0].pimage.substring(6,11) + '"/>';
+	
+			$("#imgshell").html(html)
+		}
+	})
+	$("#imgshell").on("mouseenter",".small img",function(){
+		$("#imgshell").find(".big").find("img").css("display","none")
+		$("#imgshell").find(".small").find("img").css("border","1px solid #fff")
+		var i = $(this).attr("class");
+		$("#imgshell").find(".big").find("."+i+"").css("display","block");
+		$("#imgshell").find(".small").find("."+i+"").css("border","1px solid red");
+
+	})
+	$("#imgshell").on("mouseleave",".small img",function(){
+
+		$("#imgshell").find(".small").find("img").css("border","1px solid #fff")
+
+	})
+}

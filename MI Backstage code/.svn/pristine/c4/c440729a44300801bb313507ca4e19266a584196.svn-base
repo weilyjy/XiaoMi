@@ -1,0 +1,18 @@
+package com.qf.service;
+import java.sql.SQLException;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import com.qf.bean.User;
+import com.qf.dao.UserDao;
+public class UserService {
+
+	private final static Logger LOG = LogManager.getLogger(UserService.class);
+
+	public User find(User user) throws SQLException {
+		return new UserDao().find(user);
+		// TODO Auto-generated method stub
+		
+	}
+}

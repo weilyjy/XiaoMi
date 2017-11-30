@@ -1,0 +1,95 @@
+$(function(){
+	//判定用户名
+	$("#wtf_code_5").css("opacity","0");
+	$("#username").blur(function(){
+
+				var str = $(this).attr("class");
+				if($(this).val() == ""){
+			 			$("#wtf_code_5").css("opacity","1");
+			 			$("#wtf_code_5").find('.fir').html("请输入手机号码/邮箱/用户名");
+			 			$(this).val("");
+			 	}else{
+			 		if(/\d/.test($(this).val())){
+						//验证手机号码的长度
+						if($(this).val().length != 11){
+							$("#wtf_code_5").css("opacity","1");
+			 				$("#wtf_code_5").find('.fir').html("请输入正确的手机号码");
+							
+							$(this).val("");
+						}else{
+							//正则验证手机号码是否符合规则
+							if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test($(this).val()))){
+								$("#wtf_code_5").css("opacity","1");
+			 					$("#wtf_code_5").find('.fir').html("请输入正确的手机号码");
+								$(this).val("");
+								
+							}else{
+								$("#wtf_code_5").css("opacity","0");
+							}
+						}		
+					}else{
+						if(/^[a-zA-Z0-9_-]{4,16}$/.test($(this).val())){
+						
+						$("#wtf_code_5").css("opacity","0");
+						
+						}else{
+							if(!($(this).val().length > 4 &&$ (this).val().length <16)){
+								$("#wtf_code_5").css("opacity","1");
+			 					$("#wtf_code_5").find('.fir').html("用户名为4-16组成");
+								
+								$(this).val("");
+							}else{
+								$("#wtf_code_5").css("opacity","1");
+			 					$("#wtf_code_5").find('.fir').html("用户名只可由中英文，数字及‘-’‘_’符号组成");
+								$(this).val("");
+							}
+						
+						}
+					}
+			 	}
+	})
+	//panding mima
+	$("#wtf_code_4").css("opacity","0");
+	$("#password").blur(function(){
+			var str = $(this).attr("class");
+			if($(this).val() == ""){
+				$("#wtf_code_4").css("opacity","1");
+				$("#wtf_code_4").find(".sec").html("请输入密码");
+			}else{
+				if(/^[a-zA-Z0-9]{4,16}$/.test($(this).val())){
+					
+					$("#wtf_code_4").css("opacity","0");
+					
+				}else{
+					if(!($(this).val().length > 4 &&$ (this).val().length <16)){
+						$("#wtf_code_4").css("opacity","1");
+
+						$("#wtf_code_4").find(".sec").html("用户名为4-16组成");
+						$(this).val("");
+	
+					}else{
+						$("#wtf_code_4").css("opacity","1");
+						$("#wtf_code_4").find(".sec").html("用户名只可由中英文，数字符号组成");
+						$(this).val("");
+					}
+					
+				}
+			}
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

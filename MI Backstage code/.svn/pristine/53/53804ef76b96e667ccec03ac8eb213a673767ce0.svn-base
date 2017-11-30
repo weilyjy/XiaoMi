@@ -1,0 +1,52 @@
+package com.qf.web.servlet;
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.qf.service.UserService;
+
+
+public class RegisterServlet extends HttpServlet {
+
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public String register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Throwable {
+
+
+		response.setContentType("text/html");
+		
+		// User user	= new User();
+			String username=request.getParameter("username");
+			Cookie cookie=new Cookie("uname",username);
+			response.addCookie(cookie);
+			UserService service = new UserService();
+			try {
+				
+				 	boolean u1=service.find1(username);
+				
+				if(u1){
+					
+					String flag = "true";
+					Gson gson=new Gson();
+					String json = gson.toJson(flag);
+					return json;
+				}
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		return null;
+	}
+
+}

@@ -1,0 +1,99 @@
+.wr_conent_ul {
+  background-color: #F5F5F5;
+  overflow: hidden; }
+  .wr_conent_ul li {
+    list-style: none;
+    float: left;
+    width: 296px;
+    height: 285px;
+    margin-left: 16px;
+    margin-bottom: 14px;
+    text-align: center;
+    background: #fff; }
+    .wr_conent_ul li a {
+      position: relative;
+      display: block;
+      width: 296px;
+      height: 180px;
+      color: #fff; }
+    .wr_conent_ul li img {
+      width: 296px;
+      height: 180px; }
+    .wr_conent_ul li span {
+      text-align: center;
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      width: 32px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 20px;
+      border: 2px solid #fff;
+      border-radius: 12px; }
+    .wr_conent_ul li span:hover {
+      background: #FF6700;
+      border: 2px solid #FF6700; }
+    .wr_conent_ul li h3 {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 30px; }
+    .wr_conent_ul li p {
+      font-size: 14px;
+      color: #B0B0B0;
+      line-height: 30px;
+      text-align: center; }
+
+#vedio {
+  display: none;
+  position: absolute;
+  left: 300px;
+  top: 20px; }
+
+#vedio img {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  width: 800px;
+  height: 500px; }
+
+#vedio h3 {
+  position: absolute;
+  font-size: 20px;
+  background-color: #F5F5F5;
+  display: block;
+  width: 100%;
+  height: 80px;
+  line-height: 111px;
+  top: -80px;
+  text-align: center; }
+
+#vedio span {
+  cursor: pointer;
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: url("../images/play-stop.png") no-repeat;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  border-radius: 50%; }
+
+.video_off {
+  position: absolute;
+  right: 40px;
+  top: -16px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  z-index: 2;
+  font-size: 20px; }
+
+.video_play {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0); }
+
+.video_stop {
+  box-shadow: none;
+  transform: none; }

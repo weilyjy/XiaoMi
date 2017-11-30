@@ -1,0 +1,38 @@
+package com.qf.dao;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import com.qf.utils.C3P0Utils;
+import com.qf.bean.Product;
+
+public class ProductDao {
+	private final static Logger LOG = LogManager.getLogger(ProductDao.class);
+
+	public List<Product> findAll() throws SQLException {
+		// TODO Auto-generated method stub
+		QueryRunner runner = new QueryRunner(C3P0Utils.getDataSource());
+		String sql = "select * from product";
+		return runner.query(sql, new BeanListHandler<Product>(Product.class));
+	}
+
+	public List<Product> findByCid(int cid) throws SQLException {
+		// TODO Auto-generated method stub
+		QueryRunner runner = new QueryRunner(C3P0Utils.getDataSource());
+		String sql = "select * from product where cid = ? ;";
+		return runner.query(sql, new BeanListHandler<Product>(Product.class),cid);
+	}
+
+	public List<Product> findByPname(String pname) throws SQLException {
+		// TODO Auto-generated method stub
+		QueryRunner runner = new QueryRunner(C3P0Utils.getDataSource());
+		String sql = "select * from product where pname = ? ;";
+		return runner.query(sql, new BeanListHandler<Product>(Product.class),pname);
+	}
+	
+	
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="fonts/shoppingCarFonts/iconfont.css"/>
+	<script type="text/javascript" src = "js/jquery-1.11.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/shoppingCar.css"/>
+	<script type="text/javascript" src = "js/shoppingCar.js"></script>
+</head>
+<body>
+	<!-- 购物车顶部 登录注册 商标部分   第一部分 -->
+	<div class = "lhn_header">
+		<div class = "thinborder">
+			<div id = "logoChange">
+				<a href="#">
+					<img src = "images/mi-home.png"/>
+					<img src  ="images/mi-logo.png"/>
+				</a>
+			</div>
+			<p class = "center">我的购物车
+				<span class = "warmPrompt">温馨提示:产品是否购买成功，以最终下单为准哦，请尽快结算</span>
+			</p>
+			<div class = "right">
+				<a href="../wtf/zhuce/login.html">登录</a>
+				<a href="../wtf/zhuce/register.html">注册</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 空购物车部分 第二部分 -->
+	<div class = "lhn_emptyCar">
+		<div class = "thinborder">
+			<div class = "left">
+				<img src = "images/cart-empty.png"/>
+			</div>
+			<div class = "right">
+				<h3>您的购物车还是空的！</h3>
+				<p>登陆后将显示您之前加入的商品</p>
+				<a href="../wtf/zhuce/login.html" id = "lhn_loginImde">立即登录</a>
+				<a href="../wr/index.html" id = "lhn_shopImde">马上去购物</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 购物车有商品部分 第三部分 -->
+	<!-- <div class = "lhn_contentOfGoods">
+		<div class = "thinborder">
+			<div class = "top">
+				<p class = "title">
+					<b class = "chooseAll"><i class = "iconfont icon-duihao"></i></b>
+					<span>全选</span>
+					<span>商品名称</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>小计</span>
+					<span>操作</span>
+				</p>
+				<ul id = "commodity"></ul>
+			</div>
+			<ul id = "addPrice">
+			</ul>
+			<div class = "bottom">
+				<a href="#">继续购物</a>
+				<span>共<b id = "numofAll">0</b>件商品，  已选择<b id = "hasChoose">0</b>件</span>
+				<span>合计：<strong id = "settleAmount">0</strong>元</span>
+				<em id = "goToCount">
+					去结算
+					<div class = "clickreminder">
+						请勾选需要结算的商品
+						<i class = "rrow rrow-a"></i>
+						<i class = "rrow rrow-b"></i>
+					</div>
+				</em>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- 为您推荐部分  第三部分-->
+	<div class = "lhn-recommendForYou">
+		<div class = "thinborder">
+			<div class = "top"></div>
+			<div class = "bottom"></div>
+			<p>为您推荐</p>
+		</div>
+	</div>
+
+	<!-- 为您推荐 内容  第四部分-->
+	<div class  = "lhn_recommendContent">
+		<ul id = "contentOfRecommend"></ul>
+	</div>
+
+	<!-- 底部信息    第五部分-->
+	<div class = "lhn_copyrightInfo">
+		<div class = "thinborder">
+			<div class = "top">
+				<a href="#">
+					<i class = "iconfont icon-banshou"></i>
+					<span>预约维修服务</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-tian"></i>
+					<span>7天无理由退货</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-15tian"></i>
+					<span>15天免费换货</span>
+				</a>
+				<a href="">
+					<i class = "iconfont icon-liwuhe01"></i>
+					<span>满150元包邮</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-dingwei"></i>
+					<span>520余家售后网点</span>
+				</a>
+			</div>
+			<div class = "bottom">
+				<ul class = "left">
+					<li>
+						<span>帮助中心</span>
+						<a href="#">账户管理</a>
+						<a href="#">购物指南</a>
+						<a href="#">订单操作</a>
+					</li>
+					<li>
+						<span>服务支持</span>
+						<a href="#">售后政策</a>
+						<a href="#">自助服务</a>
+						<a href="#">相关下载</a>
+					</li>
+					<li>
+						<span>线下门店</span>
+						<a href="#">小米之家</a>
+						<a href="#">服务网点</a>
+						<a href="#">零售网点</a>
+					</li>
+					<li>
+						<span>关于小米</span>
+						<a href="#">了解小米</a>
+						<a href="#">加入小米</a>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<span>关注我们</span>
+						<a href="#">新浪微博</a>
+						<a href="#">小米部落</a>
+						<a href="#">官方微信</a>
+					</li>
+					<li>
+						<span>特色服务</span>
+						<a href="#">F码通道</a>
+						<a href="#">礼物码</a>
+						<a href="#">防伪查询</a>
+					</li>
+				</ul>
+				<div class = "right">
+					<h3>400-100-5678</h3>
+					<p>周一至周日 8:00-18:00</p>
+					<p>(仅收市话费)</p>
+					<div class = "kefuFor24">
+						<i class = "iconfont icon-liaotian"></i>
+						<span>24小时在线客服</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 最底部信息  第六部分-->
+	<div class = "lhn_lastInfo">
+		<div class = "thinborder">
+			<div class = "top">
+				<div class = "left">
+					<img src = "images/logo-footer.png"/>
+				</div>
+				<div class = "center">
+					<p class = "firstline">
+						<a href="#">小米商城</a>
+						<a href="#">MIUI</a>
+						<a href="#">米聊</a>
+						<a href="#">多看书城</a>
+						<a href="#">小米路由器</a>
+						<a href="#">视频电话</a>
+						<a href="#">小米天猫店</a>
+						<a href="#">小米天猫直营店</a>
+						<a href="#">小米网盟</a>
+						<a href="#">小米移动</a>
+						<a href="#">隐私政策</a>
+						<a href="#">Select Region</a>
+					</p>
+					<p class = "secondline">
+						<span>&copy;</span>
+						<a href="#">mi.com</a>
+						<span>京ICP证110507号</span>
+						<a href="#">京ICP备10046444号</a>
+						<a href="#">京公安网备1101080202134号</a>
+						<a href="#">京网文[2014]0059-0009号</a>
+					</p>
+					<p class = "thirdline">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有所有数据均出自我司实验室测试</p>
+				</div>
+				<div class = "right">
+					<a href="#"><img src = "images/truste.png"/></a>
+					<a href="#"><img src = "images/v-logo-2.png"/></a>
+					<a href="#"><img src = "images/v-logo-1.png"/></a>
+					<a href="#"><img src = "images/v-logo-3.png"/></a>
+				</div>
+			</div>
+			<p class = "bottom">
+				<img src = "images/slogan2016.png"/>
+			</p>
+		</div>
+	</div>
+
+	<!-- 加价购弹出商品框   绝对定位第一部分 -->
+	<div class = "lhn-purchase">
+		<div class = "thinborder">
+			<p class = "top">
+				<span>选择产品</span>
+				<i class = "iconfont icon-x"></i>
+			</p>
+			<ul id = "addPriceGoods"></ul>
+			<div class = "joinInCar">加入购物车</div>
+		</div>
+	</div>
+
+	<!-- 点击删除弹出删除弹出窗提示窗口  绝对定位第二部分-->
+	<div class = "lhn-deleteGood">
+		<div class = "thinborder">
+			<i class = "iconfont icon-x"></i>
+			<p class = "sureToDelete">确定删除吗？</p>
+			<div class = "cancel">取消</div>
+			<div class = "confirm">确定</div>
+		</div>
+	</div>
+
+	<!-- 商品达到最大数量弹出框提示框 v绝对定位第三部分-->
+	<div class = "lhn-arriveMaxNum">
+		<div class = "thinborder">
+			<i class = "iconfont icon-x"></i>
+			<p class = "reminder">小米一体织轻薄羽绒服 男款 黑色已达到最大购买数量</p>
+			<div class = "confirm">确定</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+package com.qf.web.servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import com.google.gson.Gson;
+import com.qf.bean.Base;
+import com.qf.bean.Product;
+import com.qf.service.ProductService;
+
+public class ProductServlet extends BaseServlet {
+	private final static Logger LOG = LogManager.getLogger(ProductServlet.class);
+
+	
+	public void showProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		ProductService service = new ProductService();
+		List<Product> list = null;
+		try {
+			list = service.findAll();
+			Base<List<Product>> base = new Base<List<Product>>();
+			 base.setCode(1);
+			 base.setContent(list);
+			 Gson gson=new Gson();
+			 String json = gson.toJson(base);
+			// System.out.println(json);
+			 PrintWriter out = response.getWriter();   
+	         out.print(json);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public String findByCid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String string  = request.getParameter("cid");
+		int cid = Integer.parseInt(string);
+		ProductService service = new ProductService();
+		try {
+			List<Product> list = service.findByCid(cid);
+			Base<List<Product>> base = new Base<List<Product>>();
+			base.setCode(1);
+			base.setContent(list);
+			
+			 Gson gson=new Gson();
+			 String json = gson.toJson(base);
+			
+			 return json;
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+
+	public String findByPname(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String pname  = request.getParameter("pname");
+		ProductService service = new ProductService();
+		try {
+			List<Product> list = service.findByPname(pname);
+			Base<List<Product>> base = new Base<List<Product>>();
+			base.setCode(1);
+			base.setContent(list);
+			
+			 Gson gson=new Gson();
+			 String json = gson.toJson(base);
+			
+			 return json;
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+}

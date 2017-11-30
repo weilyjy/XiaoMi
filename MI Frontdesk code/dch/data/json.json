@@ -1,0 +1,11 @@
+[{
+	"code":1,
+	"content":
+		[
+			{"pid":23,"pname":"小米头戴式耳机","price":"99","pimage":"https://i1.mifile.cn/f/i/g/2015/cn-index/toudai80.jpg","flag":0,"cid":6},
+			{"pid":28,"pname":"小米活塞耳机","price":"29","pimage":"https://i1.mifile.cn/a1/pms_1482321199.12589253!200x200.jpg|https://i1.mifile.cn/a1/pms_1482321205.78014235!200x200.jpg|https://i1.mifile.cn/a1/pms_1482321209.75977825!200x200.jpg ","flag":0,"cid":6},
+			{"pid":29,"pname":"小米胶囊耳机 黑色","price":"69","pimage":"https://i1.mifile.cn/a1/T1SkV_BCd_1RXrhCrK!200x200.jpg ","cid":6},
+			{"pid":30,"pname":"小米圈铁耳机","price":"89","pimage":"https://i1.mifile.cn/a1/pms_1467184989.74561304!200x200.jpg ","cid":6},
+			{"pid":31,"pname":"小米头戴式耳机轻松版","price":"199","pimage":"https://i1.mifile.cn/a1/pms_1482301662.61336109!200x200.jpg","cid":6}
+		]
+}]

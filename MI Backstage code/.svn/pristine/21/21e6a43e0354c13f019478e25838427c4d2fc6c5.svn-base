@@ -1,0 +1,296 @@
+html,body,p,div,ul,li,ol,dl,dt,dd,table,tr,td,form,h1,h2,h3,h4,h5,h6,img,input,hr{
+	margin: 0;
+	padding: 0;
+}
+body{
+    background:#f9f9f9;
+}
+#wtf_body{
+	width: 860px;
+	height: 520px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 15px;
+	overflow: hidden;
+}
+#wtf_banner_logo{
+	background: #ff5900;
+	height: 48px;
+	width: 48px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 40px;
+}
+#wtf_banner_logo i{
+	font-size: 30px;
+	color: #fff;
+	line-height: 48px;
+	
+}
+#wtf_banner_title{
+	width: 786px;
+	height: 45px;
+	margin:0 auto;
+}
+#wtf_banner_title h1{
+	font-weight: normal;
+	font-size: 30px;
+	color: #333;
+    line-height: 1.5;
+    text-align: center;
+    margin:0 auto;
+}
+#wtf_body_wai{
+	width: 786px;
+	height: 356px;
+	margin:0 auto;
+}
+/* 手机号输入部分 */
+#wtf_body_one{
+	width: 332px;
+	height: 300px;
+	margin:0 auto;
+	padding:30px 0 30px 0; 
+	;
+}
+#wtf_body_sort_1{
+	margin-bottom: 5px;
+	font-weight: normal;
+	color: #333;
+	font-size: 14px;
+}
+#wtf_body_sort_2{
+	width: 332px;
+	height: 42px;
+	border: 1px solid #ebe8e6;
+	margin-bottom: 5px;
+}
+#wtf_body_sort_2_1{
+	width: 270px;
+	height: 42px;
+	display: block;
+	margin-left: 20px;
+	line-height: 42px;
+	border-right: 1px solid #ebe8e6;
+	float: left;
+}
+#wtf_body_font1{
+	float: left;
+	line-height: 42px;
+	margin-left: 13px;
+	text-align: center;
+	color: #ebe8e6;
+}
+#wtf_body_sort_3{
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+	margin-bottom: 10px;
+}
+#wtf_body_sort_4{
+	margin-bottom: 5px;
+	font-weight: normal;
+	color: #333;
+	font-size: 14px;
+}
+#wtf_body_sort_5{
+	width: 332px;
+	height: 40px;
+	margin-bottom: 5px;
+	border: 1px solid #ebe8e6;
+}
+#wtf_body_sort_5 input{
+	position: relative;
+    top: -44px;
+    height: 30px;
+    left: 74px;
+    width: 250px;
+    border: 0;
+    outline: 0;
+}
+
+#wtf_body_sort_5 div:nth-of-type(1){
+	width:74px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 14px;
+	text-align: center;
+	color: #555;
+}
+#wtf_body_sort_5 div:nth-of-type(2){
+	
+}
+#wtf_body_hint{
+	width: 14px;
+    height: 14px;
+    margin: -1px 5px 0 0;
+	color: #ff6700;
+	clear: both;
+	/* ; */
+}
+#wtf_body_hint i{
+	line-height: 20px;
+    font-size: 14px;
+    color: #ff6700;
+}
+	
+#wtf_body_sort_6{
+	width: 330px;
+	height: 42px;
+	border: 0;
+	background-color: #ff6700;
+    margin-top: 15px;
+    border: 1px solid rgba(186,186,186,0.3);
+    color: #fff;
+}
+#wtf_body_sort_7{
+	color: #9d9d9d;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#wtf_body_sort_7 a{
+	font-weight: bold;
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+/* 验证码接收部分 */
+#wtf_body_two{
+	line-height: 20px;
+    font-size: 14px;
+    color: #ff6700;
+    width: 322px;
+    height: 270px;
+    margin: 0 auto;
+    padding: 30px 0;
+    line-height: 20px;
+    ;
+}
+#wtf_body_sort_8{
+	margin-bottom: 15px;
+}
+#wtf_body_sort_8 p{
+	width: 332px;
+	height: 30px;
+	color: #666;
+}
+#wtf_body_sort_9{
+	width: 332px;
+	height: 42px;
+}
+#wtf_body_sort_10{
+	width: 210px;
+	height: 40px;
+	float: left;
+}
+#wtf_body_sort_9 a{
+	width:70px;
+	height: 40px;
+	float: left;
+	border: 1px solid #e8e8e8;
+	margin-left: 10px;
+	line-height: 40px;
+    text-align: center;
+    text-decoration:none;
+}
+#wtf_body_sort_11{
+	width: 332px;
+	height: 21px;
+	line-height: 21px;
+	margin-top: 5px;
+	float: left;
+}
+#wtf_body_sort_11 i{
+	font-size: 14px;
+}
+#wtf_body_sort_12{
+	width: 330px;
+    height: 42px;
+    margin: 0 auto;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e8e8e8;
+    background-color: #ff6700;
+    margin-top: 50px;
+    border: 1px solid rgba(186,186,186,0.3);
+    color: #fff;
+    margin-bottom: 10px;
+}
+#wtf_body_sort_13{
+	background: #fff;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    color: #7c7c7c;width: 330px;
+    height: 42px;
+    margin: 0 auto;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    border: 1px solid #e8e8e8;	
+    display: block;
+}
+#wtf_body_three{
+    font-size: 14px;
+    color: #ff6700;
+    width: 322px;
+    height: 270px;
+    margin: 0 auto;
+    padding: 30px 0;
+    margin-top: 20px;
+    ;
+}
+.wtf_span_1{
+	float: left;
+	font-size: 14px;
+	color: #666560;
+}
+#wtf_code_1{
+	float: left;
+	font-size: 14px;
+}
+.wtf_span_2{
+	color: #666560;
+	font-size: 14px;
+	margin-top: 10px;
+}
+#wtf_code_2,#wtf_code_3{
+	width: 322px;
+	height: 40px;
+	border: 1px solid #e8e8e8;
+	margin-top: 16px;
+}
+#wtf_code_4,#wtf_code_5{
+	width: 332px;
+	height: 21px;
+	line-height: 21px;
+	margin-top: 5px;
+	float: left;
+}
+#wtf_code_4 i{
+	font-size: 14px;
+}
+#wtf_code_5 i{
+	font-size: 14px;
+}
+#wtf_code_4{
+	;
+}
+#wtf_code_5{
+	;
+}
+#wtf_body_four{
+	font-size: 14px;
+    color: #ff6700;
+    width: 322px;
+    height: 270px;
+    margin: 0 auto;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+#wtf_end{
+	text-align:center;
+	width: 100px;
+}

@@ -1,0 +1,167 @@
+html,body,p,div,ul,li,ol,dl,dt,dd,table,tr,td,form,h1,h2,h3,h4,h5,h6,img,input,hr{
+	margin: 0;
+	padding: 0;
+}
+body{
+    color: #757575;
+}
+footer{
+	width: 100%;
+	height: 98px;
+}
+footer div{
+	width: 1130px;
+	height: 98x;
+	margin: 0 auto;
+}
+footer div img{
+	height: 98px;
+}
+#wtf_banner{
+	width: 100%;
+	height: 588px;
+	overflow: hidden;
+	text-align: center;
+	margin: 0 auto;
+}
+#wtf_banner img{
+	height: 588px;
+	margin-left: -39%;
+	overflow: hidden;
+	z-index: -1;
+}
+#wtf_register_list{
+	width: 410px;
+	height:525px;
+	background-color: #fff;
+	position: absolute;
+	right: 140px;
+	top: 130px;
+	/* display: none; */
+}
+#wtf_reg_nav{
+	margin: 27px 0 24px;
+    text-align: center;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+#wtf_reg_nav span{
+	width: 1px;
+    height: 24px;
+    margin: 0 35px 0 42px;
+}
+#wtf_reg_nav a{
+	color: #757575;
+}
+#wtf_reg_nav .wtf_active{
+	color: #f56600;
+}
+#wtf_reg_tab{
+	width: 350px;
+	height: 400px;
+	position: absolute;
+	right: 170px;
+	top:210px;
+
+	/* display: none; */
+}
+.wtf_reg_tab_num1{
+ 	margin-top: 10px;
+	width: 350px;
+	height: 45px;
+	line-height: 45px;
+	border:1px solid #bbb;
+}
+.wtf_reg_tab_num1 input{
+	width: 330px;
+	height: 22px;
+	margin-left: 10px;
+	border:0;
+}
+.wtf_reg_tab_num2{
+	margin-top: 10px;
+	width: 350px;
+	height: 45px;
+	line-height: 45px;
+	border:1px solid #bbb;
+}  
+.wtf_reg_tab_num2 input{
+	margin-left: 10px;
+	width: 330px;
+	height: 22px;
+	border:0;
+}
+#wtf_reg_tab{
+
+}
+#wtf_form_login{
+	margin-top: 10px;
+	width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #f56600;
+
+    border: 0 none;
+}
+#wtf_reg_nav_num3{
+
+	float: right;
+}
+#wtf_reg_nav_num3{
+	font-size: 14px;
+}
+#wtf_form_ban{
+	width: 349px;
+	height: 100px;
+	margin-top: 140px;
+}
+#wtf_form_ban div{
+	width: 100%;
+	height: 10px;
+	border-top: 1px solid #e0e0e0;
+}
+#wtf_form_ban div h6{
+	text-align: center;
+	margin: 0 auto;
+	line-height: 29px;
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	margin-top: -16px;
+	color: #bbb;
+	width: 100px;
+	background: #fff;
+}
+#wtf_form_ban ul{
+	list-style: none;
+	width: 349px;
+	height: 50px;
+	text-align:center;
+	line-height:50px;
+	margin: 0 auto;
+}
+#wtf_form_ban ul a{
+	display: block;
+	float: left;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	margin:0 23px 0 23px;
+}
+#wtf_form_ban ul a i{
+	font-size: 30px;
+	color: #757575;
+}
+#wtf_form_msmy{
+	margin-left: 10px;
+}
+#username,#password{
+	outline: 0;
+	border: 0;
+}

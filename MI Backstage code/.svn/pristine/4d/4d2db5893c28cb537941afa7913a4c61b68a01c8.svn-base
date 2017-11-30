@@ -1,0 +1,40 @@
+package com.qf.bean;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+public class Category2 {
+
+	private final static Logger LOG = LogManager.getLogger(Category2.class);
+	
+	private Integer c2id;
+	private String c2name;
+	private Integer cid;
+	private String cimage;
+	
+	public String getCimage() {
+		return cimage;
+	}
+	public void setCimage(String cimage) {
+		this.cimage = cimage;
+	}
+	public Integer getC2id() {
+		return c2id;
+	}
+	public void setC2id(Integer c2id) {
+		this.c2id = c2id;
+	}
+	public String getC2name() {
+		return c2name;
+	}
+	public void setC2name(String c2name) {
+		this.c2name = c2name;
+	}
+	public Integer getCid() {
+		return cid;
+	}
+	public void setCid(Integer cid) {
+		this.cid = cid;
+	}
+	
+	
+
+}

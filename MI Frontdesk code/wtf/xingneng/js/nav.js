@@ -1,0 +1,387 @@
+define(["jquery"],function($){
+	var nav = function(){
+		function getNav(arr,wrappParent,wrap){
+			var html='';
+			for(var i=0;i<arr.length;i++){
+			html+='<li><a href="#">'+arr[i]+'</a></li>';
+			$(wrappParent).find(wrap).html(html);
+			}
+		}
+//==============最上面的导航条=====================================		
+		var Navarr1=['小米商城',"MIUI","米聊","游戏","多看阅读","云服务","金融","米币",
+		"小米商城手机版","问题反馈","Select Region"];
+		getNav(Navarr1,'#wr_nav1','.wr_nav1_ul1');
+//===============logo右侧的导航条==================================		
+		var Navarr2=['小米手机','红米','笔记本','电视','盒子','新品','路由器','智能硬件',
+		'服务','社区'];
+		$('.wr_nav2_ul').find('li a').each(function(item){
+			$(this).html(Navarr2[item]);
+
+		})
+//======================hover上去之后产生不同的商品======================
+$('.wr_nav2_ul').find('li').each(function(item){
+
+	$(this).hover(function(){
+		$(this).find('#wr_nav2_goods').css('display','block');
+		var id=this.id;
+		var _this=this;
+		if(id!=''){
+			$.ajax({
+			url: "http://10.30.151.86/XiaoMi/servlet/ProductServlet?method=findByC2id&c2id="+id+"",
+			type: "GET",
+			success: function(res){
+				var resData=JSON.parse(res);
+				var homeHtml="";
+				if (resData.content.length>6) {
+				resData.content.length=6;
+			}
+				for(var i=0;i<resData.content.length;i++){
+					homeHtml+='<li><img src='+resData.content[i].pimage.split('|')[0]+' alt=""><a href="#">'+resData.content[i].pname+'</a><span>'+resData.content[i].price+'</span></li>'
+					$(_this).find('#wr_nav2_goods').html(homeHtml);
+					}
+									
+				}
+			})
+		}		
+	},function(){
+		$(this).find('#wr_nav2_goods').css('display',"none");
+		
+	})
+	
+})
+
+//=======================侧边导航栏目内部===========================
+$('.sideNav_good').find('li').each(function(item){
+	$(this).hover(function(){
+		$(this).find('.sideNav_hideGoods').css('display','block');
+		var id=this.id;
+		var _this=this;
+		// alert(id);
+		$.ajax({
+			url: "http://10.30.151.86/XiaoMi/servlet/ProductServlet?method=findByC2id&c2id="+id+"",
+			type: "GET",
+			success: function(res){
+				var resData=JSON.parse(res);
+				var homeHtml="";
+				// alert(resData.content[0].pimage.split('|')[0]);
+			if (resData.content.length>6) {
+				resData.content.length=6;
+			}
+				for(var i=0;i<resData.content.length;i++){
+					homeHtml+='<li><img src='+resData.content[i].pimage.split('|')[0]+' alt=""><a href="#">'+resData.content[i].pname+'</a><span>'+resData.content[i].price+'</span></li>'
+					$(_this).find('.sideNav_hideGoods').html(homeHtml);
+					}
+									
+				}
+			})
+	},function(){
+		$(this).find('.sideNav_hideGoods').css('display','none');
+	})
+	
+})				
+								
+//============================搜索框的实现===========================
+$('#seachWorld').focus(function(){
+	$('.keyWorld').css('display','block');
+	$('.defalutKey').css('display','none');
+	
+		$('#kW_select').find('li').each(function(i){
+			$(this).hover(function(){
+				$(this).css('backgroundColor',"#fafafa");
+				$(this).click(function(){
+					$('#seachWorld').val($(this).find('a').html());
+				})
+			},function(){
+				$(this).css('backgroundColor',"#fff");
+			})
+		})
+	})
+$('#seachWorld').blur(function(){
+	$('.keyWorld').css('display','none');
+	$('.defalutKey').css('display','block');
+	
+})
+
+//==========================侧边导航栏========================
+		$.ajax({
+				url: "http://10.30.151.86/XiaoMi/servlet/CategoryServlet?method=findType",
+				type: "GET",
+				success: function(res){
+					// alert(res);
+					var resData=JSON.parse(res);
+					$('.sideNav_good').find('li a').each(function(item){
+						$(this).html(resData.content[item].cname);
+
+					})
+				}
+			})
+//============轮播图======================================
+	var curIndex=0;
+	var timer=setInterval(function(){
+		if (curIndex<5) {
+			curIndex++;
+			
+			console.log(curIndex);
+		}else{
+			curIndex=0;
+		}
+		changeTo(curIndex);
+	},1000);
+	// alert($('.imgList li').length-1);
+		// var timer=setInterval(function(){
+		// 	if (curIndex<=5) {
+		// 		curIndex++;
+		// 		console.log(curIndex);
+		// 	}else{curIndex=0;}
+
+		// 	changeTo(curIndex);
+		// },1000);
+		$('ol').find('li').each(function(item){
+			$(this).hover(function(){
+				clearInterval(timer);
+				changeTo(item);
+			},function(){
+				timer=setInterval(function(){
+					if (curIndex<$('.imgList li').length-1) {
+						curIndex++;
+					}else{curIndex=0;}
+
+					changeTo(curIndex);
+				},4000);
+			})
+		})
+		$('.next').on('click',function(){
+			clearInterval(timer);
+			if (curIndex<$('.imgList li').length-1) {
+				curIndex++;
+				}else{curIndex=$('.imgList li').length-1;}
+			changeTo(curIndex);
+			})
+		$('.prive').on('click',function(){
+			clearInterval(timer);
+			if(curIndex==0){
+				curIndex==0;
+			}else{
+				curIndex--;
+			}
+			changeTo(curIndex);
+		})
+		function changeTo(index){
+			// alert(index);
+			$('.imgList').find('li').removeClass('imgOn').fadeOut().eq(index).fadeIn().addClass('imgOn');
+			$('ol').find('li').removeClass('active').eq(index).addClass('active');
+
+		}
+//======================小米单品===========================
+	var Mihtml='';
+	for(var i=0;i<10;i++){
+		Mihtml+='<li><a href="#"><img src="http://i1.mifile.cn/a4/6ef55907-bbed-49be-a2bb-be0821b5f7b8" alt=""><h4>小米手环 2</h4><h6>4100mAh超长续航，多彩金属</h6><span>999元起</span></a></li>'
+		$('#hot_goods').find('.hot_goodsUl').html(Mihtml);
+	}
+
+//======================================================================
+//===============热品推荐滚动效果=====================================
+	var curIndex=0;
+	var timer=null;
+	 timer=setInterval(function(){
+
+			changeTo(curIndex);
+		},6000);
+	$('.hot_goodsUl').hover(function(){
+		clearInterval(timer);
+	},function(){
+		 timer=setInterval(function(){
+
+			changeTo(curIndex);
+		},6000);
+	})
+
+	function changeTo(index){
+			// alert(curIndex);
+			
+			if (curIndex==0) {
+				$('.arrows').find('.hot_next').css('border-color','#BDBDBD').css('color','#BDBDBD');
+				$('.arrows').find('.hot_pre').css('border-color','#EFEFEF').css('color','#EFEFEF');
+
+				$('.hot_goodsUl').stop().animate({left:-1245,},500,'linear');
+				curIndex=1;
+			}else{
+				$('.arrows').find('.hot_pre').css('border-color','#BDBDBD').css('color','#BDBDBD');;
+				$('.arrows').find('.hot_next').css('border-color','#EFEFEF').css('color','#EFEFEF');
+
+				$('.hot_goodsUl').stop().animate({left:0,},500,'linear');
+				curIndex=0;
+			}
+			
+		}
+
+//=============左右箭头的click事件=============
+	$('.arrows').find('.hot_pre').on('click',function(){
+		$(this).css('border-color','#BDBDBD')
+		$('.hot_goodsUl').stop().animate({
+			left:-1245,
+		},500,'linear')
+	});
+	$('.arrows').find('.hot_next').on('click',function(){
+		// alert($('.hot_goodsUl').offset().left-10);
+		if ($('.hot_goodsUl').offset().left==-1245) {
+			$('.hot_goodsUl').stop().animate({
+				left:0,
+			},500,'linear')
+		}
+
+		
+	})
+//=========================================================================
+function ajaxGetgoods(wrap,id){
+
+		$.ajax({
+				url: "http://10.30.151.86/XiaoMi/servlet/ProductServlet?method=findByC2id&c2id="+id+"",
+				type: "GET",
+				success: function(res){
+					var resData=JSON.parse(res);
+					var homeHtml="";
+					for(var i=0;i<8;i++){
+						homeHtml+='<li><a href="#"><img src='+resData.content[i].pimage.split('|')[0]+' alt=""><h4>'+resData.content[i].pname+'</h4><h6>'+resData.content[i].pdesc+'</h6><span>'+resData.content[i].price+'</span></a>'
+						homeHtml+='<p><a href="#"><span>用着很好。漂亮</span><br><span> 来自于 生活 的评价 </span></a></p></li>'
+						$(wrap).html(homeHtml);
+					}
+					homeHtml+='<div><li><a href="#"><h4>浏览更多</h4><span>热门</span><span><i class="iconfont icon-youjiantou"><i></span></a></li></div>'	
+					$(wrap).html(homeHtml);
+									
+				}
+			})
+
+}	
+
+
+	
+//==========================hover不同的菜单显示不同的商品============================	
+	
+//===============评论的动画效果================	
+	function getComment(wrap){
+		$(wrap).find('li').each(function(item){
+		$(this).hover(function(){
+			$(this).css('boxShadow','1px 2px 10px');
+			$(this).find("p").stop().animate({
+				height:80,
+				top:220,
+				opacity:1,
+
+			},100,'linear');
+		},function(){
+			$(this).css('boxShadow','none');
+			$(this).find("p").stop().animate({
+				top:320,
+				height:0,
+				opacity:0
+
+
+			},100,'linear');
+		})
+	  })
+
+	}
+//==============获得商品================	 
+	function getProduct(wrapNav,wrap){
+		$(wrapNav).find('a').each(function(item){
+		$(this).hover(function(){
+			$(this).css('color',"#FF6700").css('border-bottom',"2px solid#FF6700");
+			$(this).siblings().css('color',"#757575").css('border-bottom',"none");
+			var _this=this;
+			ajaxGetgoods(wrap,_this.id);
+		
+		})
+		
+	 })
+
+}
+//家电
+ajaxGetgoods('.wr_Appliances_ul',5);
+getProduct(".wr_Appliances_nav p",".wr_Appliances_ul");
+getComment('.wr_Appliances_ul');
+//智能
+ajaxGetgoods('.wr_capacity_ul',19);
+getProduct(".wr_capacity_nav p",".wr_capacity_ul");
+getComment('.wr_capacity_ul');
+// 搭配
+ajaxGetgoods('.wr_match_ul',11);
+getProduct(".wr_match_nav p",".wr_match_ul");
+getComment('.wr_match_ul');
+//配件
+ajaxGetgoods('.wr_parts_ul',4);
+getProduct(".wr_parts_nav p",".wr_parts_ul");
+getComment('.wr_parts_ul');
+//周边
+ajaxGetgoods('.wr_rim_ul',14);
+getProduct(".wr_rim_nav p",".wr_rim_ul");
+getComment('.wr_rim_ul');
+//=============为你推荐=================================	
+	
+var Rechtml='';
+for(var i=0;i<10;i++){
+	Rechtml+='<li><a href="#"><img src="http://i1.mifile.cn/a1/pms_1502962275.73995818!140x140.jpg" alt=""><h4>小米</h4><h6>4100mAh超长续航，多彩金属</h6><span>999元起</span></a></li>'
+	$('#wr_rec_goods').find('.wr_rec_goods_ul').html(Rechtml);
+}
+    
+  //=============左右箭头的click事件=============
+	$('.arrows').find('.hot_pre').on('click',function(){
+		$(this).css('border-color','#B0B1BA').siblings().css('border-color','#E0E0E0')
+		$('.wr_rec_goods_ul').stop().animate({
+			left:-1245,
+		},500,'linear')
+	});
+	$('.arrows').find('.hot_next').on('click',function(){
+		// alert($('.hot_goodsUl').offset().left-10);
+		if ($('.wr_rec_goods_ul').offset().left==-1235) {
+			$('.wr_rec_goods_ul').stop().animate({
+				left:0,
+			},500,'linear')
+		}
+
+		
+	})  
+//=====================热评产品=====================================
+	var hotCommentArr = [{
+			url:"http://i1.mifile.cn/a4/8949026b-fa9a-4370-989b-5d5e2f149106",
+			title:'智米全直流变频空调',
+			desc:'一级能效，强劲冷暖',
+			price:'4399元',
+			comment:'安装简洁方便，信号不错！！！！！',
+
+		},{
+			url:"http://i1.mifile.cn/a4/3c77fe32-1113-482d-91b1-9c01a079cce6",
+			title:'智米全直流变频空调',
+			desc:'一级能效，强劲冷暖',
+			price:'4399元',
+			comment:'刚收到，外观很漂亮，颜色也很喜欢，等了好长时间了，终于拿到了，非常满意，棒棒哒！！！',
+		},{
+			url:"http://i1.mifile.cn/a4/aa6b038a-2946-4549-acff-17c58e701556",
+			title:'智米全直流变频空调',
+			desc:'一级能效，强劲冷暖',
+			price:'4399元',
+			comment:'东西真心不错，用过最好用的插线板，做工外观没得挑剔，3个USB接口很实用，充电快，建议不包邮的应该在...',
+		},{
+			url:"http://i1.mifile.cn/a4/54e35fdd-bc68-4a89-bad7-c9c3bb2fc6fe",
+			title:'智米全直流变频空调',
+			desc:'一级能效，强劲冷暖',
+			price:'4399元',
+			comment:'包装很让人感动，式样也很可爱，做出的饭全家人都爱吃，超爱五星！手机控制还是不太熟练，最主要是没有连接...',
+	}]; 
+	var hotHtml='';
+for(var i=0;i<hotCommentArr.length;i++){
+
+	hotHtml+='<li><a href="#"><img src="'+hotCommentArr[i].url+'" alt=""><h6>'+hotCommentArr[i].comment+'</h6><h4> 来自于 追逆 的评价 </h4><span>'+hotCommentArr[i].title+'|</span><span>999元起</span></a></li>';
+	$('.wr_hot_comment_ul').html(hotHtml);
+
+}		    
+
+    
+  };
+  return {
+			nav:nav,
+		};
+})
+
+
+

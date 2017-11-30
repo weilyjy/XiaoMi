@@ -1,0 +1,112 @@
+define(["jquery"],function($){
+	var nav = function(){
+		function getNav(arr,wrappParent,wrap){
+			var html='';
+			for(var i=0;i<arr.length;i++){
+			html+='<li><a href="#">'+arr[i]+'</a></li>';
+			$(wrappParent).find(wrap).html(html);
+			}
+		}
+//==============最上面的导航条=====================================		
+		var Navarr1=['小米商城',"MIUI","米聊","游戏","多看阅读","云服务","金融","米币",
+		"小米商城手机版","问题反馈","Select Region"];
+		getNav(Navarr1,'#wr_nav1','.wr_nav1_ul1');
+//===============logo右侧的导航条==================================		
+		var Navarr2=['小米手机','红米','笔记本','电视','盒子','新品','路由器','智能硬件',
+		'服务','社区'];
+		getNav(Navarr2,'#wr_nav2','.wr_nav2_ul');
+//============================搜索框的实现===========================
+$('#seachWorld').focus(function(){
+	$('.keyWorld').css('display','block');
+	$('.defalutKey').css('display','none');
+	
+		$('#kW_select').find('li').each(function(i){
+			$(this).hover(function(){
+				$(this).css('backgroundColor',"#fafafa");
+				$(this).click(function(){
+					$('#seachWorld').val($(this).find('a').html());
+				})
+			},function(){
+				$(this).css('backgroundColor',"#fff");
+			})
+		})
+	})
+$('#seachWorld').blur(function(){
+	$('.keyWorld').css('display','none');
+	$('.defalutKey').css('display','block');
+	
+})
+//==========================侧边导航栏========================
+		$.ajax({
+				//url: "http://10.30.151.86/XiaoMi/servlet/CategoryServlet?method=findType",
+			url: "servlet/CategoryServlet?method=findType",
+				type: "GET",
+				
+				success: function(res){
+				var resData =	JSON.parse(res);
+					alert(resData.content[0].cname);
+					// var oA=$('.sideNav_good li').find('a');
+					// $('.sideNav_good').find('li a').each(function(item){
+						// $(this).html(res.content[item].cname);
+
+					// })
+				}
+			})
+//============轮播图===============================================
+		var curIndex=0;
+		var timer=setInterval(function(){
+			if (curIndex<$('.imgList li').length-1) {
+				curIndex++;
+			}else{curIndex=0;}
+
+			changeTo(curIndex);
+		},4000);
+		
+		$('.next').on('click',function(){
+			
+			clearInterval(timer);
+			if (curIndex<$('.imgList li').length-1) {
+				curIndex++;
+				}else{curIndex=$('.imgList li').length-1;}
+			changeTo(curIndex);
+			})
+			
+		
+		$('.prive').on('click',function(){
+
+			clearInterval(timer);
+			
+			if(curIndex==0){
+				curIndex==0;
+			}else{
+				curIndex--;
+			}
+			
+			changeTo(curIndex);
+		})
+				
+		function changeTo(index){
+			$('.imgList').find('li').removeClass('imgOn').fadeOut(0,"linear").eq(index).fadeIn(1000,"linear").addClass('imgOn');
+			$('ol').find('li').removeClass('active').eq(index).addClass('active');
+}		
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+  };
+  return {
+			nav:nav,
+		};
+})
+
+
+

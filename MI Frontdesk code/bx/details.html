@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一级详情页概述</title>
+	<link rel="stylesheet" href="css/details.css"/>
+	<script src = "js/jquery-1.11.1.js"></script>
+	<script src = "js/details1.js"></script>
+	<link rel="stylesheet" type="text/css" href="fonts/shoppingCarFonts/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/shoppingCar.css"/>
+	<script type="text/javascript" src = "js/shoppingCar.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src = "js/require.js" defer async = "true" data-main = "js/main"></script>
+	<style ></style>
+</head>
+<body style="height:3000px">
+	<div id="wr_nav1">
+		<ul class="wr_nav1_ul1">
+		</ul>
+		<ul class="wr_nav1_ul2">
+			<li><a href="../wtf/zhuce/login.html">登录</a></li>
+			<li><a href="../wtf/zhuce/register.html">注册</a></li>
+			<li><a href="#">消息通知</a></li>
+			<li>
+				<a href="../lhn/shoppingCar.html">
+					<i class="iconfont icon-gouwuche"></i>
+					<span>购物车</span><span>(0)</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="wr_nav2">
+		<a class="logo" href="#"><!-- <img src="images/logo.png" alt=""> --></a>
+		<ul class="wr_nav2_ul">
+			<li id="1"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="2"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="3"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="5"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="6"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id=""><a href="#"> </a></li>
+			<li id="4"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id="8"><a href="#" ></a><div id="wr_nav2_goods"></div></li>
+			<li id=""><a href="#" ></a></li>
+			<li id=""><a href="#" ></a></li>
+		</ul>
+		<div class="wr_seach">
+			<form action="">
+				<input type="text" id="seachWorld">
+				<input type="submit" value="">
+				<i class="iconfont icon-sousuo01"></i>
+			</form>
+			<div class="defalutKey">
+				<a href="#">小米Max2</a>
+				<a href="#">小米Noet 3 现货</a>
+			</div>
+			<div class="keyWorld">
+				<ul id="kW_select">
+ 				    <li><a href="#">小米6</a><span>约有7件</span></li>
+					<li><a href="#">红米Note 4X</a><span>约有8件</span></li>
+					<li><a href="#">小米MIX</a><span>约有9件</span></li>
+					<li><a href="#">小米Max2</a><span>约有7件</span></li>
+					<li><a href="#">小米5X</a><span>约有5件</span></li>
+					<li><a href="#">手环</a><span>约有4件</span></li>
+					<li><a href="#">耳机</a><span>约有3件</span></li>
+					<li><a href="#">充电宝</a><span>约有9件</span></li>
+					<li><a href="#">运动鞋</a><span>约有17件</span></li>
+					<li><a href="#">路由器</a><span>约有37件</span></li>
+					<li><a href="#">小米盒子</a><span>约有7件</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class = "bx-navBox">
+		<div class = "bx-nav">
+			<div class = "bx-l">
+				<a href="#">小米笔记本Air 13.3" 独立显卡</a>
+				<a href="#">小米笔记本Air 12.5英寸</a>
+				<a href="#">小米笔记本Pro 15.6英寸</a>
+			</div>
+			<div class = "bx-m">
+				<a id = "lable-1" href = "#">概述</a>
+				<a id = "lable-2"  href = "../wtf/xingneng/xingneng.html">性能</a>
+				<a id = "lable-3" href = "../wtf/xingneng/sheji.html">设计</a>
+				<a id = "lable-4" href = "../lhn/parameter.html">参数</a>
+				<a>F码通道</a>
+				<a>用户评价</a>
+			</div>
+			<div class = "bx-r">
+				<a href="../lhn/detailsOfGoods.html">立即购买</a>
+			</div>
+		</div>
+		<div class = "bx-nav bx-fixed">
+			<div class = "bx-l">
+				<a href="#">小米笔记本Air 13.3" 独立显卡</a>
+				<a href="#">小米笔记本Air 12.5英寸</a>
+				<a href="#">小米笔记本Pro 15.6英寸</a>
+			</div>
+			<div class = "bx-m">
+				<a href = "#">概述</a>
+				<a  href = "../wtf/xingneng/xingneng.html">性能</a>
+				<a href = "../wtf/xingneng/sheji.html">设计</a>
+				<a href = "../lhn/parameter.html">参数</a>
+				<a>F码通道</a>
+				<a>用户评价</a>
+			</div>
+			<div class = "bx-r">
+				<a href="../lhn/detailsOfGoods.html">立即购买</a>
+			</div>
+		</div>
+	</div>
+	<!-- 第一页 -->
+	<div class = "bx-firstPage" style = "display:block">
+	<div class = "bx-firstText">
+
+	</div>
+	<div class = "con">
+		<p>选择轻薄，还是选择性能？如果只强调性能，就没有容纳了一块 13.3" 屏幕和全尺寸键盘，却够清够薄的<br/>全金属机身。如果只追求轻薄，就没有快3倍的硬盘，快了 15% 的内存，更不会有性能强悍的MX150独立显卡。<br/>轻薄、高性能外还有更多创新，全贴合技术、无边式玻璃、双天线WiFi...<br/>选择轻薄，还是选择性能，我们选择小米笔记本Air，做高性能的轻薄笔记本<sup>*</sup>.</p>
+	</div>
+	<ul class = "pro_ico">
+		<li>
+			<span></span>
+			<p>轻薄<br/>全金属机身</p>
+		</li>
+		<li>
+			<span></span>
+			<p>最高配备<br/>第七代英特尔i7处理器</p>
+		</li>
+		<li>
+			<span></span>
+			<p>NVIDIA独立显卡<br/>GeForce MX150</p>
+		</li>
+		<li>
+			<span></span>
+			<p>FHD屏幕<br/>超窄边框</p>
+		</li>
+		<li>
+			<span></span>
+			<p>9.5小时<br/>超长续航</p>
+		</li>
+		<li>
+			<span></span>
+			<p>8GB DDR4 内存<br/>最高 256GB PCle SSD</p>
+		</li>
+	</ul>
+	<div class = "transformBox">
+
+		<img src="images/summary-section03.jpg" alt=""/>
+	</div>
+	<div class = "con con1">
+		<span>轻薄全金属机身</span>
+		<h2>做高性能的轻薄笔记本</h2>
+		<p>笔记本内存硬盘更快，键盘屏幕更大，13.3" 配备独立显卡，再谈轻薄是否异想天开？<br/>
+		高度定制的元器件让主板更精密，全贴合技术让屏幕更纤薄，高密度电池技术则让电量不减，<br/>电池体积更小。一系列创新让笔记本兼具性能与轻薄，还有漂亮的全金属机身，<br/>你可以随时单手拿起它，或放到任何电脑包里。</p>
+	</div>
+
+	<div class = "bx-text1">
+		<span>轻至 1.3kg*</span>
+		<span>薄至 14.8mm</span>
+	</div>
+	<div class = "bx-img1">
+	</div>
+	<div class = "bx-gray1">
+		<div class = "con con1">
+		<span>全高端配置</span>
+		<h2>做轻薄本的高性能本</h2>
+		<p>谁说轻薄本不能拥有高性能？小米笔记本Air 13.3" 采用英特尔® 酷睿TM i5 / i7处理器，<br/>
+		不止能用来上网、办公，甚至能用来创作、编辑视频或玩大型游戏。更快的英特尔处理器，<br/>更快的DDR4内存，更快的PCIe固态硬盘接口，更快的独立显卡和更快的GDDR5显存，<br/>有了这样的全高端配置，你终于不必再纠结选择轻薄本还是性能本。</p>
+		</div>
+		<div class = "bx-img2"></div>
+		<ul>
+			<li>
+ 				<h3>第七代英特尔处理器</h3>
+ 				<span>酷睿<sup>TM</sup> i7 / i5 处理器</span>
+			</li>
+			<li>
+				<h3>GeForce MX150</h3>
+ 				<span>新一代独立显卡 + 2GB 显存</span>
+			</li>
+			<li>
+				<h3>指纹解锁</h3>
+ 				<span>2秒唤醒进入桌面</span>
+			</li>
+
+		</ul>
+	</div>
+
+	<div class = "bx-videoBox">
+		<div class = "bx-text">
+			<div class = "icon1">
+				<img src="images/icon1.jpg" alt=""/>
+			</div>
+			<h2 id = "leftText">不仅是新一代独立显卡<br/>还配备了2GB 大显存</h2>
+			<p>
+				我们极少见到轻薄本配备独立显卡，但这并非不可能。通过为<br/>
+				笔记本配备一个单独的处理器，专门处理图像及 3D 游戏，</br>
+				让游戏性能提升37%。高清逼真的画面，流畅的动画特效，</br>
+				让你在喜爱的游戏中流连忘返。
+			</p>
+			<ul>
+				<li>
+					<h2>GeForce MX150</h2>
+					<span>新一代独立显卡</span>
+				</li>
+				<li>
+					<h2>2GB GDDR5</h2>
+					<span>新一代显存标准</span>
+				</li>
+			</ul>
+			<p class = "info">*相比小米笔记本Air上一代显卡，游戏性能提升37%</p>
+		</div>
+
+		<div class = "video">
+			<video autoplay = "autoplay" loop = "loop">
+				<source src = "https://c1.mifile.cn/f/i/16/mibookair/summary/game.webm"></source>
+				<source src = "https://c1.mifile.cn/f/i/16/mibookair/perforrmance/p-call.mp4"></source>
+			</video>
+		</div>
+	</div>
+
+	<div class = "bx-right">
+		<div class = "intelIcon"></div>
+		<h2>
+			旗舰级笔记本处理器<br/>最高配备第七代英特尔<sup>®</sup>酷睿<sup>™</sup>i7处理器
+		</h2>
+		<p>
+			小米笔记本对性能追求的坚持，从未改变。采用第七代英特尔®酷睿™i7 处理器，</br>高性能表现较上一代速度提升12% ，功耗大幅降低，玩大型游戏也不卡顿，同时，配备的</br>
+			独立显卡，为游戏的画面渲染提供强大动力，如果你需要进行 4K 视频剪辑，也不在话下。
+		</p>
+
+	</div>
+
+	<div class = "bx-img3">
+		<div class = "text">
+			<h2>新增指纹解锁<br/>轻轻一按，2秒唤醒进入桌面</h2>
+			<p>指纹解锁不但高效，帮你跳过繁琐的密码输入过程直接解锁，约2秒便可唤醒进入<br/>桌面，它还非常安全，不但指纹信息都经过系统级加密，而且能够识别假指纹，<br/>即使是假指纹相纸或树胶假指纹，它都能严格过滤，你不必再为密码被破解而担</br>心。支持不同指纹进入不同账户，你可以和你的朋友共用一个笔记本却互不干扰。</p>
+		</div>
+
+	</div>
+	<div class = "bx-gray2">
+		<div class = "con con1">
+		<span>全高端配置</span>
+		<h2>做轻薄本的高性能本</h2>
+		<p>谁说轻薄本不能拥有高性能？小米笔记本Air 13.3" 采用英特尔® 酷睿TM i5 / i7处理器，<br/>
+		不止能用来上网、办公，甚至能用来创作、编辑视频或玩大型游戏。更快的英特尔处理器，<br/>更快的DDR4内存，更快的PCIe固态硬盘接口，更快的独立显卡和更快的GDDR5显存，<br/>有了这样的全高端配置，你终于不必再纠结选择轻薄本还是性能本。</p>
+		</div>
+		<div class = "resolution">
+			<h3>1920×1080</h3>
+			<span>全高清分辨率</span>
+		</div>
+		<ul>
+			<li>
+				<div></div>
+				<span>7H硬度，无边式玻璃</span>
+				<p>为了让屏幕抗划抗砸，将抗压能力是蓝宝石 3 倍</br>的保护玻璃覆盖在屏幕之上，莫氏硬度高达7H ，<br/>有效减少硬物敲击、跌落带来的划痕。</p>
+			</li>
+			<li>
+				<div></div>
+				<span>5.59mm 超窄边框</span>
+				<p>在13.3"屏笔记本中，你几乎找不到比它尺寸</br>更小的机身。以屏幕大小为基础，采用超窄边框<br/>设计，轻盈小巧到轻松放入背包。</p>
+			</li>
+
+		</ul>
+	</div>
+	<div class = "bx-img4">
+		<div class = "text">
+			<span>9.5小时长续航</span>
+			<h2>这么轻薄，也能用一天</h2>
+			<p>机身更轻薄，待机却更持久，这科学吗？</br>这是因为采用了一种能量密度更高的电池，</br>高达 578Wh/L 的能量密度，让电池体积缩小， </br>电量却丝毫不减，带来 9.5 小时的续航时间。</br>支持 1C 快充技术，半小时就能充50%电量。</br>待机久，充电快，无论旅途或家中，你都可以</br>随时随地使用。</p>
+		</div>
+
+
+	</div>
+	<div class = "con con1">
+		<span>环绕立体声</span>
+		<h2>AKG 扬声器，来自奥地利的艺术之声</h2>
+		<p>我们知道你喜欢音乐和电影，所以对于笔记本的扬声器也不敢含糊，邀请来自奥地利的<br/>
+		音响品牌AKG，为小米笔记本定制扬声器。在精心调校2个高音质喇叭同时，对低音进行了适当增强，<br/>配合Dolby Audio™ Premium环绕音效技术，让你获得更好的音乐、游戏、电影音质。</p>
+	</div>
+	<div class = "bx-img5">
+
+	</div>
+	<div class = "bx-img6">
+
+	</div>
+	<div class = "bx-con">
+		<h2>丰富的接口</br>现在多了一个USB-C</h2>
+		<p>新一代高端笔记本已经开始选择USB-C，小米笔记本也不例外。一个接口，兼具充电、视频输出、</br>数据传输多种用途，你还可以使用配件进行扩展。除了USB-C，还具备全尺寸HDMI、2个 USB3.0</br>以及耳麦接口。丰富的接口，让你甚至能够连接两台4K显示器进行工作。</p>
+	</div>
+	<div class = "bx-img7">
+		<div class = "text">
+			<h2>聪明的转接器</br>让笔记本更加强大</h2>
+			<p>有了它，你的电脑接口扩展了1.5倍！</br>HDMI接口扩展至2个，USB接口扩展至3个。</br>更多专业设备都能连接到小米笔记本上，</br>例如，你可以拥有3个显示屏，外接移动硬盘。</p>
+			<p class = "textp"><a href="#">*转接器需单独购买，更多类型转接器请查看></a></p>
+		</div>
+		<div class = "img"></div>
+	</div>
+	<div class = "bx-bImg">
+		<div class = "text">
+			<span>免密码解锁</span>
+			<h2>小米手环</br>就是你的电脑密码</h2>
+			<p>最快输入密码的方式，就是免输密码，让小米手环2</br>成为你的密码吧。在你的电脑系统上安装小米智能</br>解锁应用，将小米手环2 升级至最新固件，打开</br>电脑时，无需任何操作，电脑就已经安全解锁。</br>除了轻薄与高性能，小米笔记本还有许多创新，</br>手环解锁就是其中一项。</p>
+		</div>
+	</div>
+
+	<div class = "con con2">
+		<span>功能亮点</span>
+		<h2>你的小米笔记本，越用越喜爱</h2>
+		<p>小米笔记本的创新源自点点滴滴：相同的轻薄，不同的全金属机身。相同的固态硬盘，不同的高速接口。</br>相同的8GB内存，不同的DDR4标准。相同的千兆WiFi，不同的双天线设计。相同的全高清屏幕，</br>不同的全贴合工艺…点点滴滴的创新，就是为了更轻、更快、更流畅、更清晰，这是我们的第一款笔记本，</br>却饱含了我们最大的诚意。</p>
+	</div>
+	<ul class = "bx-config">
+		<li>
+			<span class = "num">GDDR5</span>
+			<span class = "infor">新一代显存</span>
+		</li>
+		<li>
+			<span class = "num">PCIe SSD</span>
+			<span class = "infor">新一代固态硬盘</span>
+		</li>
+		<li>
+			<span class = "num">DDR4</span>
+			<span class = "infor">新一代内存</span>
+		</li>
+		<li>
+			<span class = "num">无边式玻璃</span>
+			<span class = "infor">5.59mm 超窄边框</span>
+		</li>
+		<li>
+			<span class = "num">全尺寸键盘</span>
+			<span class = "infor">背光照明</span>
+		</li>
+		<li>
+			<span class = "num">多点触控</span>
+			<span class = "infor">玻璃触控板</span>
+		</li>
+		<li>
+			<span class = "num">环绕音效</span>
+			<span class = "infor">杜比音效进阶版</span>
+		</li>
+		<li>
+			<span class = "num">双 4K 输出</span>
+			<span class = "infor">三屏显示</span>
+		</li>
+		<li>
+			<span class = "num">2X2 WiFi</span>
+			<span class = "infor">2倍快！支持802.11 ac</span>
+		</li>
+	</ul>
+
+	<div class = "bx-version">
+		<h2>轻薄、高性能</br>挑选一个适合你的版本</h2>
+		<ul>
+			<li>
+				<h3>i7 256GB尊享版</h3>
+				<p class = "text1">第七代英特尔Core i7处理器</br>8GB内存</br>256GB PCIe SSD，支持硬盘扩容</br>独立显卡</p>
+				<p class = "text2">全贴合1080p屏幕</br>内装 Windows 10系统</br>金属机身 / 轻至 1.3kg</p>
+				<span>￥<i>5999</i></span>
+				<p class = "btn"><a href="#">立即购买</a></p>
+			</li>
+			<li>
+				<h3>i5 256GB标准版</h3>
+				<p class = "text1">第七代英特尔Core i5处理器</br>8GB内存</br>256GB PCIe SSD，支持硬盘扩容</br>独立显卡</p>
+				<p class = "text2">全贴合1080p屏幕</br>内装 Windows 10系统</br>金属机身 / 轻至 1.3kg</p>
+				<span>￥<i>5199</i></span>
+				<p class = "btn"><a href="#">立即购买</a></p>
+			</li>
+		</ul>
+		<div class = "bx-explain ">
+		数据说明：第七代处理器性能相比第六代处理器，数据提升12%。GDDR5 相比上一代快3倍。新一代内存标准 DDR4 2133MHz 对比 上一代 DDR3 1866 MHz 频率提升15%。SSD传输速度数据来自小米实验室。802.11ac 2X2的双天线支持同时工作，对比 802.11ac 1X1 两个天线轮替工作，下载速度提升一倍。充电数据来自小米实验室，1C 快充技术相比一般 0.7C 快充技术，充电效率快30%；关机或者休眠情况下使用自带电源充电，从0至50%电量需30分钟。电池续航时间是使用国际测试标准 MobileMark 2014测试。接口由5个扩展为7个，扩展了1.5倍。37%提升的测试数据来自小米实验室，采用3DMark 11软件在DC模式下进行跑分测试。指纹识别解锁速度基于小米实验室测试结果。 三屏显示功能需配备转接器实现。
+	</div>
+	</div>
+	<div class = "bx-videoBottom">
+		<div class = "title">
+			<h2>除了独立显卡，</br>还有哪些高端配置？</h2>
+			<a href="#">了解性能></a>
+		</div>
+		<div class = "videoBox">
+			<video src = "https://c1.mifile.cn/f/i/16/mibookair/summary/footer-video.webm" autoplay loop>
+				<source src = "https://c1.mifile.cn/f/i/16/mibookair/summary/footer-video.webm"></source>
+				<source src = "https://c1.mifile.cn/f/i/16/mibookair/summary/footer-video.mp4"></source>
+			</video>
+		</div>
+	</div>
+	<div class = "code-bg">
+		<ul class = "bx-code">
+		<li>
+			<img src="https://i8.mifile.cn/b2c-mimall-media/545d72409b2fc955b8040e77ccba31a0.png" alt=""/>
+			<div class = "rightB">
+				<p>扫码关注【<b>小米笔记本</b>】公众号</p>
+				<span>参与活动抽奖、了解更多产品信息、寻求更多咨询帮助</span>
+			</div>
+		</li>
+		<li>
+			<img src="https://i8.mifile.cn/b2c-mimall-media/b30def5a8f0e967d128dec2b49751aa6.png" alt=""/>
+			<div class = "rightB">
+				<p>扫码关注【<b>小米商城</b>】公众号</p>
+				<span>及时获取商品优惠信息、新品资讯、福利活动。</span>
+			</div>
+
+		</li>
+	</ul>
+
+	</div>
+	</div>
+
+
+
+
+
+
+	<!-- 底部信息    第五部分-->
+	<div class = "lhn_copyrightInfo">
+		<div class = "thinborder">
+			<div class = "top">
+				<a href="#">
+					<i class = "iconfont icon-banshou"></i>
+					<span>预约维修服务</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-tian"></i>
+					<span>7天无理由退货</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-15tian"></i>
+					<span>15天免费换货</span>
+				</a>
+				<a href="">
+					<i class = "iconfont icon-liwuhe01"></i>
+					<span>满150元包邮</span>
+				</a>
+				<a href="#">
+					<i class = "iconfont icon-dingwei"></i>
+					<span>520余家售后网点</span>
+				</a>
+			</div>
+			<div class = "bottom">
+				<ul class = "left">
+					<li>
+						<span>帮助中心</span>
+						<a href="#">账户管理</a>
+						<a href="#">购物指南</a>
+						<a href="#">订单操作</a>
+					</li>
+					<li>
+						<span>服务支持</span>
+						<a href="#">售后政策</a>
+						<a href="#">自助服务</a>
+						<a href="#">相关下载</a>
+					</li>
+					<li>
+						<span>线下门店</span>
+						<a href="#">小米之家</a>
+						<a href="#">服务网点</a>
+						<a href="#">零售网点</a>
+					</li>
+					<li>
+						<span>关于小米</span>
+						<a href="#">了解小米</a>
+						<a href="#">加入小米</a>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<span>关注我们</span>
+						<a href="#">新浪微博</a>
+						<a href="#">小米部落</a>
+						<a href="#">官方微信</a>
+					</li>
+					<li>
+						<span>特色服务</span>
+						<a href="#">F码通道</a>
+						<a href="#">礼物码</a>
+						<a href="#">防伪查询</a>
+					</li>
+				</ul>
+				<div class = "right">
+					<h3>400-100-5678</h3>
+					<p>周一至周日 8:00-18:00</p>
+					<p>(仅收市话费)</p>
+					<div class = "kefuFor24">
+						<i class = "iconfont icon-liaotian"></i>
+						<span>24小时在线客服</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 最底部信息  第六部分-->
+	<div class = "lhn_lastInfo">
+		<div class = "thinborder">
+			<div class = "top">
+				<div class = "left">
+					<img src = "images/logo-footer.png"/>
+				</div>
+				<div class = "center">
+					<p class = "firstline">
+						<a href="#">小米商城</a>
+						<a href="#">MIUI</a>
+						<a href="#">米聊</a>
+						<a href="#">多看书城</a>
+						<a href="#">小米路由器</a>
+						<a href="#">视频电话</a>
+						<a href="#">小米天猫店</a>
+						<a href="#">小米天猫直营店</a>
+						<a href="#">小米网盟</a>
+						<a href="#">小米移动</a>
+						<a href="#">隐私政策</a>
+						<a href="#">Select Region</a>
+					</p>
+					<p class = "secondline">
+						<span>&copy;</span>
+						<a href="#">mi.com</a>
+						<span>京ICP证110507号</span>
+						<a href="#">京ICP备10046444号</a>
+						<a href="#">京公安网备1101080202134号</a>
+						<a href="#">京网文[2014]0059-0009号</a>
+					</p>
+					<p class = "thirdline">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有所有数据均出自我司实验室测试</p>
+				</div>
+				<div class = "right">
+					<a href="#"><img src = "images/truste.png"/></a>
+					<a href="#"><img src = "images/v-logo-2.png"/></a>
+					<a href="#"><img src = "images/v-logo-1.png"/></a>
+					<a href="#"><img src = "images/v-logo-3.png"/></a>
+				</div>
+			</div>
+			<p class = "bottom">
+				<img src = "images/slogan2016.png"/>
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>
